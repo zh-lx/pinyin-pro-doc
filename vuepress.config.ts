@@ -44,5 +44,8 @@ module.exports = {
         text: 'Progressive custom theme capabilities, ranging from expanding your own Markdown tags to customizing complete theme packages, are up to you',
       },
     ],
+    PageControl: {
+      hidePageMeta: true,
+    },
   },
 };
