@@ -20,25 +20,6 @@ const sidebar = {
       children: [{ text: '在线运行', link: '/run/run.md' }],
     },
   ],
-  // '/feature': [
-  //   {
-  //     text: 'React18 新特性',
-  //     children: [
-  //       {
-  //         text: '并发渲染 —— concurrent',
-  //         link: '/feature/concurrent.md',
-  //       },
-  //       {
-  //         text: '新的 render api',
-  //         link: '/feature/render-api.md',
-  //       },
-  //       {
-  //         text: 'Suspense',
-  //         link: '/feature/suspense.md',
-  //       },
-  //     ],
-  //   },
-  // ],
 };
 
 export default sidebar;
