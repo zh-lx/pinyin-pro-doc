@@ -6,7 +6,7 @@ module.exports = {
     'js汉字转拼音库。获取中文拼音、韵母、声母、声调、首字母，支持拼音匹配',
   theme: 'vuepress-theme-write',
   themeConfig: {
-    logo: 'https://i.ibb.co/26fJ5vF/pinyin-logo.png',
+    logo: 'https://i.ibb.co/yfpmW9d/pinyin-logo.png',
     type: 'docs',
     sidebar,
     navbar: [
