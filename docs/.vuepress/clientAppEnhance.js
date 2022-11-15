@@ -4,6 +4,7 @@ import ElementPlus from 'element-plus';
 import BasicParamsTable from './components/basic-params-table.vue';
 import CodeRun from './components/code-run.vue';
 import 'element-plus/theme-chalk/index.css';
+import './style.css';
 
 export default defineClientAppEnhance(({ app }) => {
   app.use(ElementPlus);

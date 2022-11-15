@@ -3,8 +3,9 @@ const sidebar = {
     {
       text: '指南',
       children: [
-        { text: '介绍', link: '/guide/introduction.md' },
+        // { text: '介绍', link: '/guide/introduction.md' },
         { text: '快速开始', link: '/guide/start.md' },
+        { text: '更新日志', link: '/guide/changelog.md' },
       ],
     },
     {

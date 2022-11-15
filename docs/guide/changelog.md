@@ -1,0 +1,168 @@
+# 更新日志
+
+## 3.11.0
+
+- 【perf】优化拼音词库，提升拼音识别准确率
+- 【perf】体积优化约 10%
+- 【feat】增强 match 方法，支持中文匹配，中文及拼音混合匹配
+
+## 3.10.2
+
+- 【patch】修正部分读音:
+  - 责: 'zhài' -> 'zé zhài'
+  - 朝阳: 'zhāo cháo yáng' -> 'cháo yáng'
+  - 假发: 'jiǎ fā' -> 'jiǎ fà'
+- 【perf】优化 typescript 的 `options` 中的配置项提示
+
+## 3.10.1
+
+- 【patch】修正部分读音：
+  - 哼：'hng' -> 'hēng hng'
+
+## 3.10.0
+
+- 【perf】优化包体积（约 30%）
+
+## 3.9.0
+
+- 【feat】`pinyin` 方法增加 `v: true` 可选项将拼音 `ü` 替换为 `v`
+
+## 3.8.3
+
+- 【patch】修正部分读音：
+  - 查岗: 'zhā gǎng' -> 'chá gǎng'
+  - 查核: 'zhā hé' -> 'chá hé'
+  - 查缉: 'zhā jī' -> 'chá jī'
+  - 查检: 'zhā jiǎn' -> 'chá jiǎn'
+  - 查看: 'zhā kàn' -> 'chá kàn'
+  - 查勤: 'zhā qín' -> 'chá qín'
+  - 查帐: 'zhā zhàng' -> 'chá zhàng'
+  - 查照: 'zhā zhào' -> 'chá zhào'
+
+## 3.8.2
+
+- 【fix】再次修复双字节 unicode 编码的文字返回默认值不正确的问题
+
+## 3.8.1
+
+- 【fix】修复双字节 unicode 编码的文字返回默认值不正确的问题
+
+## 3.8.0
+
+- 【feat】`pinyin` 方法增加 `nonZh` 可选参数，用于配置非中文字符串的输出规则
+
+## 3.7.2
+
+- 【patch】修正部分读音
+  - 物美价廉: 'jià lián wù měi' -> wù měi jià lián
+
+## 3.7.1
+
+- 【fix】修复 “嗯” 在 `toneType: 'none'` 下拼音转换错误的问题
+
+## 3.7.0
+
+- 【perf】增加 esm 引入方式
+- 【test】完善测试用例
+
+## 3.6.2
+
+- 【fix】修复 `customPinyin` 和 `surname` 同时使用时没有优先匹配自定义拼音的问题
+- 【fix】修复 `surname` 模式下部分情况姓氏拼音匹配不正确的问题
+
+## 3.6.1
+
+- 【fix】修复 `removeNonZh` 参数为 `true` 且输入字符串全部为非汉字时的堆栈溢出问题
+
+## 3.6.0
+
+- 【feat】`pinyin` 方法新增 `removeNonZh` 参数，为 `true` 时移除非汉字的字符
+
+## 3.5.0
+
+- 【feat】新增 `match` api 以支持[拼音文本匹配功能](#match)
+
+## 3.4.1
+
+- 【fix】修复 `pattern: 'first'` 或者 `pattern: 'initial'` 时，指定 `toneType: 'num'` 获取音调失效的问题
+
+## 3.4.0
+
+- 【feat】`pinyin` 方法新增 `mode` 参数，`surname` 模式支持姓氏模式拼音识别
+- 【feat】支持 `customPinyin` api，自定义拼音功能
+- 【fix】修复文本过长时堆栈溢出问题
+- 【patch】修正部分读音：
+  - 褚: 'zhǔ' -> 'chǔ zhǔ'
+  - 俞: 'yù' -> 'yú yù'
+  - 臧: 'zàng' -> 'zāng'
+  - 贲: 'bì' -> 'bēn bì'
+  - 莘: 'xīn' -> 'shēn xīn'
+  - 郦: 'zhí' -> 'lì zhí'
+
+## 3.3.1
+
+- 【feat】修复文本过长时堆栈溢出问题
+
+## 3.3.0
+
+- 【perf】优化拼音转换速度，经测试拼音转换速度提升近 30 倍！
+
+## 3.2.3
+
+- 【perf】typescript 环境下根据 `options` 中 type 传入的值为 `'string'` 或者 `'array'`，自动提示结果为 `'string'` 还是 `'string[]'`
+- 【perf】优化拼音转换算法，提高转换速度
+
+## 3.2.2
+
+- 【fix】修复 options 为 `{ multiple: true, type: 'array' }` 时若未找到多音字结果的报错问题
+
+## 3.2.1
+
+- 【patch】修复部分读音
+  - 艾: 'yì' -> 'ài yì'
+  - 吽: 'ōu' -> 'hōng hǒu ōu'
+
+## 3.2.0
+
+- 【perf】根据单字的使用频率调整字典顺序，性能大幅提升，长句的转换时间只需之前版本 50% 左右的时间
+- 【patch】修复部分读音：
+  啊: ā -> a
+  阿: ē -> ā
+- 【perf】增加浏览器中 script 的引入方式
+
+## 3.1.0
+
+- 【feat】增加获取拼音首字母功能
+- 【docs】修复 readme 中音调形式参数 toneType 错写成了 tone 的错误
+
+## 3.0.7
+
+- 【perf】package.json 中去掉 readme 选项
+
+## 3.0.6
+
+- 【docs】修复 readme 中版本更新文档链接错误问题
+
+## 3.0.5
+
+- 【docs】优化 README.md 文档二维码大小
+
+## 3.0.4
+
+- 【docs】README.md 增加二维码
+
+## 3.0.3
+
+- 【perf】增加 eslintrc
+
+## 3.0.2
+
+- 【perf】优化 npm 包质量和 README.md
+
+## 3.0.1
+
+- 【fix】修复没有 index.d.ts 类型指向的问题
+
+## 3.0.0
+
+- 【refactor】使用 typescript + rollup 打包重构了项目，api 使用上没有发生变化
