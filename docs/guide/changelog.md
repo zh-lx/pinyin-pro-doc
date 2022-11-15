@@ -12,12 +12,12 @@
   - 责: 'zhài' -> 'zé zhài'
   - 朝阳: 'zhāo cháo yáng' -> 'cháo yáng'
   - 假发: 'jiǎ fā' -> 'jiǎ fà'
-- 【perf】优化 typescript 的 `options` 中的配置项提示
+- 【perf】优化 typescript 提示
 
 ## 3.10.1
 
-- 【patch】修正部分读音：
-  - 哼：'hng' -> 'hēng hng'
+- 【patch】修正部分读音:
+  - 哼: 'hng' -> 'hēng hng'
 
 ## 3.10.0
 
@@ -25,11 +25,11 @@
 
 ## 3.9.0
 
-- 【feat】`pinyin` 方法增加 `v: true` 可选项将拼音 `ü` 替换为 `v`
+- 【feat】`pinyin` API 中 `options` 参数增加 `v` 可选属性，`v: true` 可将拼音 `ü` 替换为 `v`
 
 ## 3.8.3
 
-- 【patch】修正部分读音：
+- 【patch】修正部分读音:
   - 查岗: 'zhā gǎng' -> 'chá gǎng'
   - 查核: 'zhā hé' -> 'chá hé'
   - 查缉: 'zhā jī' -> 'chá jī'
@@ -49,11 +49,11 @@
 
 ## 3.8.0
 
-- 【feat】`pinyin` 方法增加 `nonZh` 可选参数，用于配置非中文字符串的输出规则
+- 【feat】`pinyin` API 中 `options` 参数增加 `nonZh` 可选属性，用于配置非中文字符串的输出规则
 
 ## 3.7.2
 
-- 【patch】修正部分读音
+- 【patch】修正部分读音:
   - 物美价廉: 'jià lián wù měi' -> wù měi jià lián
 
 ## 3.7.1
@@ -153,7 +153,7 @@
 
 ## 3.0.3
 
-- 【perf】增加 eslintrc
+- 【lint】增加 eslintrc 规范代码质量
 
 ## 3.0.2
 

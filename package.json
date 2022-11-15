@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp"
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs"
   },
   "devDependencies": {
     "@vuepress/bundler-webpack": "2.0.0-beta.36",

@@ -20,6 +20,10 @@ const sidebar = {
       text: '工具',
       children: [{ text: '在线运行', link: '/run/run.md' }],
     },
+    {
+      text: '更多',
+      children: [{ text: '交流', link: '/more/contact.md' }],
+    },
   ],
 };
 
