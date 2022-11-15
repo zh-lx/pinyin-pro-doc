@@ -28,7 +28,8 @@ module.exports = {
       startPath: '/guide/start.md',
       type: 'docs',
       hidePageMeta: true,
-      homeImg: 'https://i.ibb.co/26fJ5vF/pinyin-logo.png',
+      homeImg:
+        'https://t1.wodetu.cn/2022/11/15/168e8a29acc856c48fdef4060c0ba5ad.png',
     },
     HOME_ITEMS: [
       {
