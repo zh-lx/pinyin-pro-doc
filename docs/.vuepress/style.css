@@ -7,3 +7,7 @@
 #__home_bg_container .description {
   display: none;
 }
+#__home_bg_container .home-main-img {
+  height: 160px;
+  width: auto;
+}
