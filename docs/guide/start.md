@@ -34,7 +34,7 @@ $ pnpm install pinyin-pro
 ```html
 <!-- 引入固定版本 -->
 <head>
-  <script src="https://unpkg.com/pinyin-pro@3.11.0/dist/index.js"></script>
+  <script src="https://unpkg.com/pinyin-pro@3.12.0/dist/index.js"></script>
 </head>
 
 <!-- 自动引入最新版本 -->
@@ -48,7 +48,7 @@ $ pnpm install pinyin-pro
 ```html
 <!-- 引入固定版本 -->
 <head>
-  <script src="https://unpkg.com/pinyin-pro@3.11.0/dist/index.js"></script>
+  <script src="https://unpkg.com/pinyin-pro@3.12.0/dist/index.js"></script>
 </head>
 
 <!-- 自动引入最新版本 -->
