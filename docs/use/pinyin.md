@@ -59,7 +59,22 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); /
 pinyin('汉语拼音', { pattern: 'final', toneType: 'num', type: 'array' }); // ['an4', 'u3', 'in1', 'in1']
 ```
 
-### 韵头(介音)/韵腹/韵尾
+### 韵头(介音)/韵腹/韵尾 <Badge type="tip" text="v3.12.0+" vertical="middle" />
+
+设置 `options.pattern` 为 `finalHead/finalBody/finalTail` 时，返回的结果将为拼音的韵头/韵腹/韵尾。
+
+```js
+import { pinyin } from 'pinyin-pro';
+
+// 返回韵头
+pinyin('村庄', { pattern: 'finalHead', type: 'array' }); // [ '', 'u' ]
+
+// 返回韵腹
+pinyin('村庄', { pattern: 'finalBody', type: 'array' }); // [ 'ū', 'ā' ]
+
+// 返回韵尾
+pinyin('村庄', { pattern: 'finalTail', type: 'array' }); // [ 'n', 'ng' ]
+```
 
 ### 音调
 
@@ -74,7 +89,7 @@ pinyin('汉语拼音', { pattern: 'num' }); // '4 3 1 1'
 pinyin('汉语拼音', { pattern: 'num', type: 'array' }); // ["4", "3", "1", "1"]
 ```
 
-### 首字母
+### 首字母 <Badge type="tip" text="v3.1.0+" vertical="middle" />
 
 设置 `options.pattern` 为 `first` 时，返回的结果将为拼音的首字母。
 
@@ -88,7 +103,68 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none' }); // 'z q s l e
 // 获取数组形式拼音首字母
 pinyin('赵钱孙李额', { pattern: 'first', type: 'array' }); // ['z', 'q', 's', 'l', 'é']
 // 获取数组形式不带音调拼音首字母
-pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none'， type: 'array' }); // ['z', 'q', 's', 'l', 'e']
+pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' }); // ['z', 'q', 's', 'l', 'e']
+```
+
+### 完整内容 <Badge type="tip" text="v3.12.0+" vertical="middle" />
+
+设置 `options.type` 为 `all` 时，返回的结果将为拼音的全部内容的数组。
+
+```js
+const result = pinyin('汉语拼音', { type: 'all' });
+
+/**
+[
+  {
+    origin: '汉',
+    pinyin: 'hàn',
+    initial: 'h',
+    final: 'àn',
+    first: 'h',
+    finalHead: '',
+    finalBody: 'à',
+    finalTail: 'n',
+    num: 4,
+    isZh: true,
+  },
+  {
+    origin: '语',
+    pinyin: 'yǔ',
+    initial: 'y',
+    final: 'ǔ',
+    first: 'y',
+    finalHead: '',
+    finalBody: 'ǔ',
+    finalTail: '',
+    num: 3,
+    isZh: true,
+  },
+  {
+    origin: '拼',
+    pinyin: 'pīn',
+    initial: 'p',
+    final: 'īn',
+    first: 'p',
+    finalHead: '',
+    finalBody: 'ī',
+    finalTail: 'n',
+    num: 1,
+    isZh: true,
+  },
+  {
+    origin: '音',
+    pinyin: 'yīn',
+    initial: 'y',
+    final: 'īn',
+    first: 'y',
+    finalHead: '',
+    finalBody: 'ī',
+    finalTail: 'n',
+    num: 1,
+    isZh: true,
+  },
+];
+ */
 ```
 
 ### 多音字
@@ -108,7 +184,7 @@ pinyin('好', { multiple: true, type: 'array' }); // ["hǎo", "hào"]
 pinyin('好学', { multiple: true }); // hào xué
 ```
 
-### 姓氏模式
+### 姓氏模式 <Badge type="tip" text="v3.4.0+" vertical="middle" />
 
 设置 `options.mode` 为 `surname` 可以开启姓氏模式，匹配到百家姓中的姓氏相关的字符将优先输出姓氏拼音。
 
@@ -122,7 +198,7 @@ pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
 pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
 ```
 
-### 非汉字字符处理
+### 非汉字字符处理 <Badge type="tip" text="v3.8.0+" vertical="middle" />
 
 设置 `options.nonZh` ，可以处理非汉字字符的不同输出形式
 
@@ -139,7 +215,7 @@ pinyin('我very喜欢你', { nonZh: 'removed' }); // 'wǒ xǐ huān nǐ'
 pinyin('我very喜欢你', { nonZh: 'consecutive' }); // 'wǒ very xǐ huān nǐ'
 ```
 
-### 拼音 ü 替换为 v
+### 拼音 ü 替换为 v <Badge type="tip" text="v3.9.0+" vertical="middle" />
 
 设置 `options.v` 为 `true` 之后，转换结果中的 `ü` 将会被替换为 `v` (带音调的 `ǖ,ǘ,ǚ,ǜ` 不会被转换)：
 

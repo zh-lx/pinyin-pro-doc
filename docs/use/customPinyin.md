@@ -1,4 +1,4 @@
-# customPinyin
+# customPinyin <Badge type="tip" text="v3.4.0+" vertical="middle" />
 
 `pinyin-pro` 内部导出了 `customPinyin` 方法，支持用户自定义设置词句拼音，当中文中匹配用户自己定义的词句拼音时，优先使用用户自定义的拼音。
 

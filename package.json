@@ -23,6 +23,6 @@
     "pinyin-pro": "^3.11.0",
     "prismjs": "^1.29.0",
     "vue-codemirror": "^6.1.1",
-    "vuepress-theme-write": "^0.0.10"
+    "vuepress-theme-write": "^0.0.12"
   }
 }

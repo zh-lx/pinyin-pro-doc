@@ -8,8 +8,7 @@
       style="width: 100%; margin-top: 20px"
     >
       <el-table-column prop="name" label="属性" width="80" align="center">
-        <template #default="scope"
-          >.....................................................................
+        <template #default="scope">
           <div>
             <div>{{ scope.row.name }}</div>
           </div>
@@ -108,14 +107,41 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); /
 `,
       },
       {
+        value: 'finalHead',
+        desc: '返回韵头（介音）',
+        example: `// 返回韵头（介音）
+pinyin('村庄', { pattern: 'finalHead', type: 'array' }); // [ '', 'u' ]
+`,
+      },
+      {
+        value: 'finalBody',
+        desc: '返回韵腹',
+        example: `// 返回韵腹
+pinyin('村庄', { pattern: 'finalBody', type: 'array' }); // [ 'ū', 'ā' ]
+`,
+      },
+      {
+        value: 'finalTail',
+        desc: '返回韵尾',
+        example: `// 返回韵尾
+pinyin('村庄', { pattern: 'finalTail', type: 'array' }); // [ 'n', 'ng' ]
+`,
+      },
+      {
         value: 'num',
         desc: '返回音调对应数字(轻声返回 0)',
-        example: `pinyin('汉语拼音', { pattern: 'num' }); // '4 3 1 1'`,
+        example: `// 返回音调
+pinyin('汉语拼音', { pattern: 'num' }); // '4 3 1 1'
+pinyin('汉语拼音', { pattern: 'num', type: 'array' }); // ["4", "3", "1", "1"]
+`,
       },
       {
         value: 'first',
         desc: '返回拼音首字母',
-        example: `pinyin('赵钱孙李额', { pattern: 'first' }); // 'z q s l é'`,
+        example: `// 返回首字母
+pinyin('赵钱孙李额', { pattern: 'first' }); // 'z q s l é'
+pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none' }); // 'z q s l e'
+pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' }); // ['z', 'q', 's', 'l', 'e']`,
       },
     ],
   },
@@ -160,7 +186,7 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); /
       },
       {
         value: 'all',
-        desc: '输出全部信息的对象数组',
+        desc: '输出完整信息的对象数组',
         example: `pinyin('拼音', { type: 'all' }); 
 /** result:
 [
