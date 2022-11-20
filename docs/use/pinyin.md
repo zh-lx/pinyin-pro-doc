@@ -59,6 +59,8 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); /
 pinyin('汉语拼音', { pattern: 'final', toneType: 'num', type: 'array' }); // ['an4', 'u3', 'in1', 'in1']
 ```
 
+### 韵头(介音)/韵腹/韵尾
+
 ### 音调
 
 设置 `options.pattern` 为 `num` 时，返回的结果将为拼音的音调对应的数字。

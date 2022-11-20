@@ -7,25 +7,25 @@
       border
       style="width: 100%; margin-top: 20px"
     >
-      <el-table-column
-        prop="name"
-        label="属性、类型及描述"
-        width="150"
-        align="center"
-      >
+      <el-table-column prop="name" label="属性" width="80" align="center">
+        <template #default="scope"
+          >.....................................................................
+          <div>
+            <div>{{ scope.row.name }}</div>
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="name" label="类型" width="70" align="center">
         <template #default="scope">
           <div>
-            <div>options.{{ scope.row.name }}</div>
-            <div :style="{ color: 'var(--el-color-success)' }">
-              {{ scope.row.type }}
-            </div>
-            <div
-              :style="{
-                color: 'var(--el-text-color-placeholder)',
-              }"
-            >
-              {{ scope.row.optionDesc }}
-            </div>
+            {{ scope.row.type }}
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="name" label="描述" width="100" align="center">
+        <template #default="scope">
+          <div>
+            {{ scope.row.optionDesc }}
           </div>
         </template>
       </el-table-column>
@@ -38,9 +38,12 @@
       <el-table-column prop="desc" label="说明">
         <template #default="scope">
           <div>{{ scope.row.desc }}</div>
-          <div
-            v-html="highlight(scope.row.example, javascript, 'javascript')"
-          ></div>
+          <el-button
+            size="small"
+            type="primary"
+            @click="() => handleViewDemo(scope.row)"
+            >查看示例</el-button
+          >
         </template>
       </el-table-column>
       <el-table-column
@@ -48,17 +51,25 @@
         :style="{ textAlign: 'center' }"
         prop="default"
         label="默认值"
-        width="62"
+        width="70"
       />
     </el-table>
+    <el-dialog v-model="dialogVisible" :title="title" class="my-dialog">
+      <pre v-html="highlight(demo, javascript, 'javascript')"></pre>
+    </el-dialog>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import 'prismjs';
 const Prism = (window as any).Prism;
 const highlight = Prism.highlight;
 const { javascript } = Prism.languages;
+
+const dialogVisible = ref(false);
+const demo = ref('');
+const title = ref('');
 
 const options = [
   {
@@ -70,17 +81,31 @@ const options = [
       {
         value: 'pinyin',
         desc: '返回拼音全拼',
-        example: `pinyin('汉语拼音', { pattern: 'pinyin' }); // 'hàn yǔ pīn yīn'`,
+        example: `// 返回拼音全拼
+pinyin('汉语拼音', { pattern: 'pinyin' }); // 'hàn yǔ pīn yīn'
+pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'none' }); // 'han yu pin yin'
+pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'num' }); // 'han4 yu3 pin1 yin1'
+pinyin('汉语拼音', { pattern: 'pinyin', type: 'array' }); // ["hàn", "yǔ", "pīn", "yīn"]
+pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'none', type: 'array' }); // ["han", "yu", "pin", "yin"]
+`,
       },
       {
         value: 'initial',
         desc: '返回声母',
-        example: `pinyin('汉语拼音', { pattern: 'initial' }); // 'h y p y'`,
+        example: `// 返回声母
+pinyin('汉语拼音', { pattern: 'initial' }); // 'h y p y'
+pinyin('汉语拼音', { pattern: 'initial', type: 'array' }); // ["h", "y", "p", "y"]
+`,
       },
       {
         value: 'final',
         desc: '返回韵母',
-        example: `pinyin('汉语拼音', { pattern: 'final' }); // 'àn ǔ īn īn'`,
+        example: `// 返回韵母
+pinyin('汉语拼音', { pattern: 'final' }); // 'àn ǔ īn īn'
+pinyin('汉语拼音', { pattern: 'final', toneType: 'none' }); // 'an u in in'
+pinyin('汉语拼音', { pattern: 'final', type: 'array' }); // ["àn", "ǔ", "īn", "īn"]
+pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); // ["an", "u", "in", "in"]
+`,
       },
       {
         value: 'num',
@@ -132,6 +157,39 @@ const options = [
         value: 'array',
         desc: '输出为数组',
         example: `pinyin('汉语拼音', { type: 'array' }); // ["hàn", "yǔ", "pīn", "yīn"]`,
+      },
+      {
+        value: 'all',
+        desc: '输出全部信息的对象数组',
+        example: `pinyin('拼音', { type: 'all' }); 
+/** result:
+[
+  {
+    origin: '拼',
+    pinyin: 'pīn',
+    initial: 'p',
+    final: 'īn',
+    first: 'p',
+    finalHead: '',
+    finalBody: 'ī',
+    finalTail: 'n',
+    num: 1,
+    isZh: true,
+  },
+  {
+    origin: '音',
+    pinyin: 'yīn',
+    initial: 'y',
+    final: 'īn',
+    first: 'y',
+    finalHead: '',
+    finalBody: 'ī',
+    finalTail: 'n',
+    num: 1,
+    isZh: true,
+  },
+]
+*/`,
       },
     ],
   },
@@ -252,9 +310,15 @@ const optionSpanMethod = ({ row, column, rowIndex, columnIndex }) => {
     }
   }
 };
+
+const handleViewDemo = (row) => {
+  demo.value = row.example;
+  title.value = `options.${row.name} = ${row.value}`;
+  dialogVisible.value = true;
+};
 </script>
 
-<style>
+<style lang="scss">
 table {
   margin: 0;
 }
@@ -264,5 +328,20 @@ th {
 }
 .el-table .cell {
   padding: 0 4px !important;
+}
+
+.el-table .cell pre {
+  width: 100%;
+}
+.el-dialog {
+  --el-dialog-width: 800px !important;
+}
+
+.my-dialog {
+  .el-dialog__body {
+    padding: 0px 20px 10px;
+    max-height: 70vh;
+    overflow: scroll;
+  }
 }
 </style>
