@@ -4,6 +4,7 @@
       class="star-img"
       src="https://img.shields.io/github/stars/zh-lx/pinyin-pro?style=social"
       @click="jump2Github"
+      alt="GitHub"
     />
   </div>
 </template>
