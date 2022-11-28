@@ -1969,6 +1969,11 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
+easy-dom-util@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/easy-dom-util/-/easy-dom-util-0.0.27.tgz#2354fb1efa675f434424a93c543892628a68381d"
+  integrity sha512-ELgbhXbwRpEXQYzD6KogThMLe1IRj2ueEtwRsjggIFzmUskz56uu/w/C0iUq9OkKR8mEinC0KhVd0QdKRMsD7A==
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmmirror.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -4504,6 +4509,13 @@ tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   version "2.2.1"
   resolved "https://registry.npmmirror.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
+
+tc-editor@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/tc-editor/-/tc-editor-1.0.4.tgz#b396440dc799d26974a8d7ffa81ce1381c4b0f75"
+  integrity sha512-nWflFCeES0r5UJEjfSGZka7RV6aHJmLMOOpk3z+MtnaY/1FTijVUOc1pNNuwfIG96BIQEUVm1ikLTw2TKzXrxw==
+  dependencies:
+    easy-dom-util "^0.0.27"
 
 terser-webpack-plugin@^5.1.3:
   version "5.3.6"

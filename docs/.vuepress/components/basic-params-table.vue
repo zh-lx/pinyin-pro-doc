@@ -1,36 +1,50 @@
 <template>
   <div>
-    <vxe-table
-      border
-      :column-config="{ resizable: true }"
-      :data="data"
-      :span-method="optionSpanMethod"
-    >
-      <vxe-column field="name" title="属性" width="80"></vxe-column>
-      <vxe-column field="type" title="类型" width="70"></vxe-column>
-      <vxe-column field="optionDesc" title="描述" width="100"></vxe-column>
-      <vxe-column field="value" title="可选值" width="92"></vxe-column>
-      <vxe-column field="desc" title="说明">
-        <template #default="{ row }">
-          <div>
-            {{ row.desc }}
-            <vxe-button size="mini" @click="() => handleViewDemo(row)"
-              >查看示例</vxe-button
-            >
-          </div>
-        </template>
-      </vxe-column>
-      <vxe-column field="default" title="默认值" width="70"></vxe-column>
-    </vxe-table>
-    <vxe-modal v-model="dialogVisible" :title="title" class="my-dialog">
-      <pre v-html="highlight(demo, javascript, 'javascript')"></pre>
-    </vxe-modal>
+    <table>
+      <tbody>
+        <tr>
+          <th width="80">属性</th>
+          <th width="70">类型</th>
+          <th width="100">描述</th>
+          <th width="92">可选值</th>
+          <th><div>说明</div></th>
+          <th width="70">默认值</th>
+        </tr>
+        <tr v-for="(row, index) in data" :key="index">
+          <td width="80" :rowspan="row.rowspan" v-if="row.rowspan">
+            {{ row.name }}
+          </td>
+          <td width="70" :rowspan="row.rowspan" v-if="row.rowspan">
+            {{ row.type }}
+          </td>
+          <td width="100" :rowspan="row.rowspan" v-if="row.rowspan">
+            {{ row.optionDesc }}
+          </td>
+          <td width="92">{{ row.value }}</td>
+          <td>
+            <div>
+              {{ row.desc }}
+              <button size="mini" @click="() => handleViewDemo(row)">
+                查看示例
+              </button>
+            </div>
+          </td>
+          <td width="70" :rowspan="row.rowspan" v-if="row.rowspan">
+            {{ row.default }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <Modal v-model:visible="dialogVisible" :title="title">
+    <pre v-html="highlight(demo, javascript, 'javascript')"></pre>
+  </Modal>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 import 'prismjs';
+import Modal from './modal.vue';
 const Prism = (window as any).Prism;
 const highlight = Prism.highlight;
 const { javascript } = Prism.languages;
@@ -282,6 +296,7 @@ const getOptionsTable = () => {
         value: child.value,
         desc: child.desc,
         example: child.example || '',
+        rowspan: index === 0 ? option.children.length : 0,
       });
     });
   });
@@ -289,23 +304,6 @@ const getOptionsTable = () => {
 };
 
 const data = getOptionsTable();
-
-const optionSpanMethod = ({ row, column, _rowIndex, columnIndex }) => {
-  console.log(row, column);
-  if (['name', 'type', 'optionDesc', 'default'].includes(column.property)) {
-    if (row.siblingIndex === 0) {
-      return {
-        rowspan: row.siblingCount,
-        colspan: 1,
-      };
-    } else {
-      return {
-        rowspan: 0,
-        colspan: 1,
-      };
-    }
-  }
-};
 
 const handleViewDemo = (row) => {
   demo.value = row.example;
@@ -317,10 +315,19 @@ const handleViewDemo = (row) => {
 <style lang="scss">
 table {
   margin: 0;
+  margin-top: 16px;
+  border-left: 1px solid #dfdfdf;
 }
+
 td,
 th {
   border: none;
+  text-align: left;
+  padding: 12px 8px;
+  color: #333;
+  border-top: none;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .vxe-modal--wrapper .vxe-modal--box {
@@ -330,6 +337,25 @@ th {
   * {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+  }
+}
+
+button {
+  background-color: #fff;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', Arial;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #333;
+  &:hover {
+    color: var(--blue-6);
+    border-color: var(--blue-6);
   }
 }
 </style>

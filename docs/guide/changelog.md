@@ -1,5 +1,9 @@
 # 更新日志
 
+## 3.13.0
+
+- 【fix】<b>pinyin</b>：修复 options 参数 `multiple: true` 和 `toneType: 'none'` 同时使用时，可能存在重复拼音的问题
+
 ## 3.12.0
 
 - 【feat】<b>pinyin</b>：`options.pattern` 参数新增可选值获取韵头(`finalHead`)、韵腹(`finalBody`)、韵尾(`finalTail`)的功能。 [去看看](/use/pinyin.html#韵头-介音-韵腹-韵尾)
