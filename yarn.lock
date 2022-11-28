@@ -3792,10 +3792,10 @@ pify@^4.0.1:
   resolved "https://registry.npmmirror.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pinyin-pro@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.npmjs.org/pinyin-pro/-/pinyin-pro-3.11.0.tgz#bb0c198f6bf2cb739414c790fa2781bcaa762971"
-  integrity sha512-l2JDFyEIMdTIyff3OkuoSIJCpYTwrxrR2KuMyGMjdNEcHGcEVSKIEb7mvKEKOhJaZLp2FB++Jax+MD0BWafbhg==
+pinyin-pro@^3.12.0:
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/pinyin-pro/-/pinyin-pro-3.12.0.tgz#21570fa6b57894874a8dd64d732a19b1e952032a"
+  integrity sha512-NTrgzqUr0mAzwIbVw+jSnknaTrby+/hKChBYVxQJzYAs3/jgGdvm9I71pMMi69tCFFSKbzmjgPg7bZ5rPR7JkQ==
 
 portfinder@^1.0.28:
   version "1.0.32"
@@ -4772,6 +4772,11 @@ vuepress@2.0.0-beta.36:
   dependencies:
     vuepress-vite "2.0.0-beta.36"
 
+vxe-table@^4.3.6:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/vxe-table/-/vxe-table-4.3.6.tgz#494048abe3820af48a1e756dbf2a482f07a72995"
+  integrity sha512-SZ+ocVoOFc1PSzvpz6q5n7YvWvPSXUV+raet0zaSbQy3g8Dj7jKNlFbcsSoWZm8Uys9ufAQxeqYO5rRwOB2m7A==
+
 w3c-keyname@^2.2.4:
   version "2.2.6"
   resolved "https://registry.npmjs.org/w3c-keyname/-/w3c-keyname-2.2.6.tgz#8412046116bc16c5d73d4e612053ea10a189c85f"
@@ -4939,6 +4944,11 @@ ws@^8.4.2:
   version "8.11.0"
   resolved "https://registry.npmmirror.com/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
   integrity sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==
+
+xe-utils@^3.5.7:
+  version "3.5.7"
+  resolved "https://registry.yarnpkg.com/xe-utils/-/xe-utils-3.5.7.tgz#2c885852dfadd5c8beeffdc1f884f8ceb962c669"
+  integrity sha512-3H+fDBKBR2wLJgyA7k9C/w1Xljx6Maml5ukV0WDY06HjYyGs2FEz6XhcwRCLIDXX4pBP3Gu0nX9DbCeuuRA2Ew==
 
 yallist@^4.0.0:
   version "4.0.0"

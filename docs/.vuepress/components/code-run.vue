@@ -1,5 +1,5 @@
 <template>
-  <div class="code-run-container">
+  <div class="code-run-container" id="code-run-container">
     <Codemirror
       v-model="code"
       :style="{ height: '400px', width: '100%' }"
@@ -9,9 +9,9 @@
       :extensions="extensions"
     />
     <div class="code-options">
-      <el-button @click="resetCode">重置</el-button>
-      <el-button type="primary" class="run-btn" @click="runCode"
-        >运行</el-button
+      <vxe-button size="small" @click="resetCode">重置</vxe-button>
+      <vxe-button size="small" class="run-btn" @click="runCode"
+        >运行</vxe-button
       >
     </div>
     <pre class="result-pre">{{ result || '当前无输出结果' }}</pre>
@@ -23,16 +23,20 @@ import { ref, onMounted } from 'vue';
 import { Codemirror } from 'vue-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
-import { pinyin, match, customPinyin } from 'pinyin-pro';
 import beautify from 'json-beautify';
+import { pinyin, match, customPinyin } from 'pinyin-pro';
 
 const extensions = [javascript(), oneDark];
 
 // 注册全局 API
+// @ts-ignore
 window.pinyin = pinyin;
+//  @ts-ignore
 window.match = match;
+//  @ts-ignore
 window.customPinyin = customPinyin;
 const log = console.log;
+
 console.log = (result) => {
   log(result);
   return beautify(result, [], 2, 80);
@@ -65,11 +69,21 @@ onMounted(() => {
   outline: none !important;
 }
 
-.code-run-container {
+#code-run-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 400px;
+  * {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  :deep(.cm-scroller) {
+    .cm-line {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+  }
 }
 .code-options {
   margin: 12px 0;

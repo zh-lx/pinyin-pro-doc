@@ -1,61 +1,30 @@
 <template>
   <div>
-    <el-table
-      title="options 参数属性说明表"
+    <vxe-table
+      border
+      :column-config="{ resizable: true }"
       :data="data"
       :span-method="optionSpanMethod"
-      border
-      style="width: 100%; margin-top: 20px"
     >
-      <el-table-column prop="name" label="属性" width="80" align="center">
-        <template #default="scope">
+      <vxe-column field="name" title="属性" width="80"></vxe-column>
+      <vxe-column field="type" title="类型" width="70"></vxe-column>
+      <vxe-column field="optionDesc" title="描述" width="100"></vxe-column>
+      <vxe-column field="value" title="可选值" width="92"></vxe-column>
+      <vxe-column field="desc" title="说明">
+        <template #default="{ row }">
           <div>
-            <div>{{ scope.row.name }}</div>
+            {{ row.desc }}
+            <vxe-button size="mini" @click="() => handleViewDemo(row)"
+              >查看示例</vxe-button
+            >
           </div>
         </template>
-      </el-table-column>
-      <el-table-column prop="name" label="类型" width="70" align="center">
-        <template #default="scope">
-          <div>
-            {{ scope.row.type }}
-          </div>
-        </template>
-      </el-table-column>
-      <el-table-column prop="name" label="描述" width="100" align="center">
-        <template #default="scope">
-          <div>
-            {{ scope.row.optionDesc }}
-          </div>
-        </template>
-      </el-table-column>
-      <el-table-column
-        :style="{ textAlign: 'center' }"
-        prop="value"
-        label="可选值"
-        width="92"
-      />
-      <el-table-column prop="desc" label="说明">
-        <template #default="scope">
-          <div>{{ scope.row.desc }}</div>
-          <el-button
-            size="small"
-            type="primary"
-            @click="() => handleViewDemo(scope.row)"
-            >查看示例</el-button
-          >
-        </template>
-      </el-table-column>
-      <el-table-column
-        align="center"
-        :style="{ textAlign: 'center' }"
-        prop="default"
-        label="默认值"
-        width="70"
-      />
-    </el-table>
-    <el-dialog v-model="dialogVisible" :title="title" class="my-dialog">
+      </vxe-column>
+      <vxe-column field="default" title="默认值" width="70"></vxe-column>
+    </vxe-table>
+    <vxe-modal v-model="dialogVisible" :title="title" class="my-dialog">
       <pre v-html="highlight(demo, javascript, 'javascript')"></pre>
-    </el-dialog>
+    </vxe-modal>
   </div>
 </template>
 
@@ -321,7 +290,8 @@ const getOptionsTable = () => {
 
 const data = getOptionsTable();
 
-const optionSpanMethod = ({ row, column, rowIndex, columnIndex }) => {
+const optionSpanMethod = ({ row, column, _rowIndex, columnIndex }) => {
+  console.log(row, column);
   if (['name', 'type', 'optionDesc', 'default'].includes(column.property)) {
     if (row.siblingIndex === 0) {
       return {
@@ -352,22 +322,14 @@ td,
 th {
   border: none;
 }
-.el-table .cell {
-  padding: 0 4px !important;
-}
 
-.el-table .cell pre {
-  width: 100%;
-}
-.el-dialog {
-  --el-dialog-width: 800px !important;
-}
-
-.my-dialog {
-  .el-dialog__body {
-    padding: 0px 20px 10px;
-    max-height: 70vh;
-    overflow: scroll;
+.vxe-modal--wrapper .vxe-modal--box {
+  max-height: 70vh;
+  overflow: scroll;
+  width: 800px !important;
+  * {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
   }
 }
 </style>
