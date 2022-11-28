@@ -39,7 +39,7 @@ const log = console.log;
 
 console.log = (result) => {
   log(result);
-  return beautify(result, [], 2, 80);
+  return beautify(result, null, 2, 80);
 };
 
 const initialCode = `const result = pinyin('汉语拼音');
