@@ -34,17 +34,25 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, watch, defineEmits } from 'vue';
+import { defineProps, watch, defineEmits, onMounted, ref } from 'vue';
 const props = defineProps<{ visible: boolean; title: string }>();
 const emit = defineEmits(['update:visible']);
+const isMounted = ref(false);
 
 const close = () => {
   emit('update:visible', false);
 };
 
+onMounted(() => {
+  isMounted.value = true;
+});
+
 watch(
   () => props.visible,
   (val) => {
+    if (!isMounted.value) {
+      return;
+    }
     if (val) {
       document.body.style.overflow = 'hidden';
     } else {

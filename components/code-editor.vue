@@ -22,6 +22,10 @@ import TCEditor from 'tc-editor';
 
 const tce = ref<TCEditor>();
 
+// 标记组件注册成功
+// @ts-ignore
+window.CodeEditorMounted = true;
+
 // 注册全局 API
 // @ts-ignore
 window.pinyin = pinyin;

@@ -42,16 +42,21 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import 'prismjs';
 import Modal from './modal.vue';
-const Prism = (window as any).Prism;
-const highlight = Prism.highlight;
-const { javascript } = Prism.languages;
 
 const dialogVisible = ref(false);
 const demo = ref('');
 const title = ref('');
+const highlight = ref(() => '');
+const javascript = ref('');
+
+onMounted(() => {
+  const Prism = (window as any).Prism;
+  highlight.value = Prism.highlight;
+  javascript.value = Prism.languages;
+});
 
 const options = [
   {
