@@ -19,6 +19,6 @@
     "json-beautify": "^1.1.1",
     "pinyin-pro": "^3.13.0",
     "tc-editor": "^1.0.4",
-    "vuepress-theme-write": "^0.0.26"
+    "vuepress-theme-write": "^0.0.27"
   }
 }

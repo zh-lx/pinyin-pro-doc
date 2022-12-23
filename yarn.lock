@@ -3800,10 +3800,10 @@ vue@^3.2.45:
     "@vue/server-renderer" "3.2.45"
     "@vue/shared" "3.2.45"
 
-vuepress-theme-write@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-write/-/vuepress-theme-write-0.0.26.tgz#1aad551764a297f516599db6b435504061313f06"
-  integrity sha512-3/OC1Mej/v/hLgXQnpF62e4XdJ/QE4SeS4w1pm5mgbw0pQgbXYPsD+dnN4tPWvywtR9x0BBnftHVv4ANC2UEeQ==
+vuepress-theme-write@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-write/-/vuepress-theme-write-0.0.27.tgz#ef6d97db55460d86a4f23b2dc5c77d5146cf2895"
+  integrity sha512-pN1xg4XlAU3qRHtRcCOOmCDE5JnRg4s5GKNbf+mTJRT6gDkJTqlqOl4PXOkot5jsX+n+ZFChGasRZtHt5FW3sg==
   dependencies:
     "@icon-park/vue-next" "^1.3.6"
     "@vuepress/plugin-search" "2.0.0-beta.59"
