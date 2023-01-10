@@ -12,13 +12,11 @@
     "@vuepress/bundler-webpack": "2.0.0-beta.59",
     "@vuepress/plugin-register-components": "^2.0.0-beta.59",
     "sass-loader": "^13.2.0",
-    "vuepress": "2.0.0-beta.59"
-  },
-  "dependencies": {
+    "vuepress": "2.0.0-beta.59",
     "@vuepress/plugin-search": "2.0.0-beta.59",
     "json-beautify": "^1.1.1",
     "pinyin-pro": "^3.13.0",
     "tc-editor": "^1.0.4",
-    "vuepress-theme-write": "^0.0.27"
+    "vuepress-theme-write": "^0.0.29"
   }
 }

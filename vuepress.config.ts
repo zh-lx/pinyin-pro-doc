@@ -7,7 +7,7 @@ import { getDirname, path } from '@vuepress/utils';
 const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
-  title: 'pinyin-pro',
+  title: 'pinyin-pro - js汉字转拼音|js中文转拼音|拼音匹配',
   description:
     'js汉字转拼音库。获取中文拼音、韵母、声母、声调、首字母，支持拼音匹配',
   theme: WriteTheme({
