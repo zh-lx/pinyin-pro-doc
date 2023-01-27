@@ -18,6 +18,7 @@ export default defineUserConfig({
   }),
   alias: {
     NavbarExtra: path.resolve(__dirname, './components/navbar-extra.vue'),
+    HomeFooter: path.resolve(__dirname, './components/home-footer.vue'),
   },
   clientConfigFile: path.resolve(__dirname, './components/app.ts'),
   bundler: webpackBundler({}),
