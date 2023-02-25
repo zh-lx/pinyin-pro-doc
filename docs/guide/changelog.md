@@ -1,5 +1,10 @@
 # 更新日志
 
+## 3.13.1
+
+- 【fix】<b>pinyin</b>：修复 options 参数 `multiple` 与 `surname` 同时使用时冲突问题
+- 【patch】修正部分儿化字读音
+
 ## 3.13.0
 
 - 【fix】<b>pinyin</b>：修复 options 参数 `multiple: true` 和 `toneType: 'none'` 同时使用时，可能存在重复拼音的问题
