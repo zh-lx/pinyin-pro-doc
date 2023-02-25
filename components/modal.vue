@@ -34,21 +34,24 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, watch, defineEmits } from 'vue';
+import { defineProps, watch, defineEmits, onMounted, ref } from 'vue';
 const props = defineProps<{ visible: boolean; title: string }>();
 const emit = defineEmits(['update:visible']);
+const isMounted = ref(false);
 
 const close = () => {
   emit('update:visible', false);
 };
 
+onMounted(() => {
+  isMounted.value = true;
+});
+
 watch(
   () => props.visible,
   (val) => {
-    if (val) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (!isMounted.value) {
+      return;
     }
   },
   {
@@ -68,7 +71,7 @@ watch(
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  z-index: 99999;
 }
 
 .pinyin-modal {
@@ -105,5 +108,20 @@ watch(
     padding: 16px;
     overflow: auto;
   }
+}
+</style>
+<style>
+.__modal-measure-scrollbar {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: -300px;
+  left: -300px;
+  overflow: scroll;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.modal-measure-scrollbar .__inner {
+  height: 200px;
 }
 </style>
