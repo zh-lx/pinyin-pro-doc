@@ -1,5 +1,11 @@
 # 更新日志
 
+## 3.13.2
+
+- 【patch】修正部分读音
+  - 皇甫: `huáng pǔ` -> `huáng fǔ`
+  - 一丁点儿: `yī dīng diǎnr` -> `yī dīng diǎn er`
+
 ## 3.13.1
 
 - 【fix】<b>pinyin</b>：修复 options 参数 `multiple` 与 `surname` 同时使用时冲突问题
