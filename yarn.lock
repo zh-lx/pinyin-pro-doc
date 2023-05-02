@@ -3052,10 +3052,10 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-pinyin-pro@^3.13.2:
-  version "3.13.2"
-  resolved "https://registry.yarnpkg.com/pinyin-pro/-/pinyin-pro-3.13.2.tgz#b5a4716c33579398334291740b61a218b796b314"
-  integrity sha512-DKz04M0PkrongGyJW7GU+iNB2jInwLcP1p5+w0gu0hz2PtF8q+GTC1GDW731wyhm+q7PGoyMuY3sLONLTqi6mg==
+pinyin-pro@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/pinyin-pro/-/pinyin-pro-3.14.0.tgz#3f444e1117caf7236bc90a1573c9653b048f2736"
+  integrity sha512-mbFw2Gx8IlbnxClhaACRFUWXa/lCzCttrPIdHXPzAvWOAmTKcdTFlMjbt5Quq6YY2asgD79Ml/MQpPEGN3o8iw==
 
 postcss-csso@^6.0.1:
   version "6.0.1"

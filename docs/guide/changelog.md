@@ -1,5 +1,27 @@
 # 更新日志
 
+## 3.14.0
+
+- 【refactor】使用 AC 自动机优化拼音匹配速度，性能提升近 50 倍！
+- 【patch】优化部分字词读音
+  - 种: 'zhòng zhǒng chóng' -> 'zhǒng zhòng chóng'
+  - 去掉 "种" 三声多余词汇
+  - 增加以下词汇：
+    - 耕种: 'gēng zhòng'
+    - 种地: 'zhòng dì'
+    - 种菜: 'zhòng cài'
+    - 栽种: 'zāi zhòng'
+    - 接种: 'jiē zhòng'
+    - 垦种: 'kěn zhòng'
+    - 种殖: 'zhòng zhí'
+    - 种瓜: 'zhòng guā'
+    - 种豆: 'zhòng dòu'
+    - 种树: 'zhòng shù'
+    - 睡着: 'shuì zháo'
+    - 笼子: 'lóng zi'
+    - 厦门: 'xià mén'
+    - 东莞: 'dōng guǎn'
+
 ## 3.13.2
 
 - 【patch】修正部分读音
