@@ -4,6 +4,7 @@ const sidebar = [
     children: [
       // { text: '介绍', link: '/guide/introduction.md' },
       { text: '快速开始', link: '/guide/start.md' },
+      { text: '性能/准确率', link: '/guide/compare.md' },
       { text: '更新日志', link: '/guide/changelog.md' },
     ],
   },
