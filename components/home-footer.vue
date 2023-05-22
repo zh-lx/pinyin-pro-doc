@@ -11,22 +11,22 @@
 
 <style lang="scss" scoped>
 .site-info {
-  width: 100vw;
+  width: 100%;
   height: 68px;
   margin-top: 20px;
-  border-top: var(--color-border-2);
+  border-top: var(--wc-border-light);
   display: flex;
   justify-content: center;
   align-items: center;
   .site-code {
-    color: var(--color-text-8);
+    color: var(--wc-text-primary);
     &:hover {
-      color: var(--blue-6) !important;
+      color: var(--wc-text-brand) !important;
     }
   }
   .copy-right {
-    color: var(--color-text-8);
-    border-left: var(--color-border-2);
+    color: var(--wc-text-primary);
+    border-left: var(--wc-border-primary);
     padding-left: 12px;
     margin-left: 12px;
   }

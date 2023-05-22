@@ -1,6 +1,7 @@
 import { webpackBundler } from '@vuepress/bundler-webpack';
 import { defineUserConfig } from '@vuepress/cli';
-import WriteTheme from './node_modules/vuepress-theme-write';
+// import WriteTheme from './node_modules/vuepress-theme-write';
+import WriteTheme from './vuepress-theme-write/src/node/index';
 import sidebar from './sidebar';
 import { getDirname, path } from '@vuepress/utils';
 
@@ -18,19 +19,18 @@ export default defineUserConfig({
   }),
   alias: {
     NavbarExtra: path.resolve(__dirname, './components/navbar-extra.vue'),
-    HomeFooter: path.resolve(__dirname, './components/home-footer.vue'),
+    // HomeFooter: path.resolve(__dirname, './components/home-footer.vue'),
   },
   clientConfigFile: path.resolve(__dirname, './components/app.ts'),
-  bundler: webpackBundler({}),
   define: {
     $Site: {
-      title: '',
-      description: '',
+      title: 'pinyin-pro',
+      description: '一个识别准确、性能优异的专业的汉字拼音转换库',
       start: '快速上手',
       startPath: '/guide/start.md',
       type: 'docs',
       hidePageMeta: true,
-      homeImg: '/images/pinyin.png',
+      // homeImg: '/images/pinyin.png',
     },
     $HomeItems: [
       {
