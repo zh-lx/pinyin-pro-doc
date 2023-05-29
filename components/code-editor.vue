@@ -1,14 +1,16 @@
 <template>
   <div id="tc-editor"></div>
   <div class="code-options">
-    <button size="small" @click="resetCode">重置</button>
+    <button size="small" @click="resetCode">
+      {{ isEn ? 'Reset' : '重置' }}
+    </button>
     <button
       style="margin-left: 16px"
       size="small"
       class="run-btn"
       @click="runCode"
     >
-      运行
+      {{ isEn ? 'Run' : '运行' }}
     </button>
   </div>
   <pre class="result-pre">{{ result || '当前无输出结果' }}</pre>
@@ -19,6 +21,11 @@ import { ref, onMounted } from 'vue';
 import beautify from 'json-beautify';
 import { pinyin, match, customPinyin } from 'pinyin-pro';
 import TCEditor from 'tc-editor';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isEn = route.path.startsWith('/en/');
 
 const tce = ref<TCEditor>();
 

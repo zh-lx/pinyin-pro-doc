@@ -2,25 +2,25 @@
 
 ## 3.14.0
 
-- 【refactor】使用 AC 自动机优化拼音匹配速度，性能提升近 50 倍！
-- 【patch】优化部分字词读音
+- 【refactor】使用 [AC 自动机算法](https://en.wikipedia.org/wiki/Aho–Corasick_algorithm)优化拼音匹配速度，性能提升近 50 倍！
+- 【patch】校正部分汉字及词汇的拼音：
   - 种: 'zhòng zhǒng chóng' -> 'zhǒng zhòng chóng'
-  - 去掉 "种" 三声多余词汇
-  - 增加以下词汇：
-    - 耕种: 'gēng zhòng'
-    - 种地: 'zhòng dì'
-    - 种菜: 'zhòng cài'
-    - 栽种: 'zāi zhòng'
-    - 接种: 'jiē zhòng'
-    - 垦种: 'kěn zhòng'
-    - 种殖: 'zhòng zhí'
-    - 种瓜: 'zhòng guā'
-    - 种豆: 'zhòng dòu'
-    - 种树: 'zhòng shù'
-    - 睡着: 'shuì zháo'
-    - 笼子: 'lóng zi'
-    - 厦门: 'xià mén'
-    - 东莞: 'dōng guǎn'
+  - 去掉 `种(zhǒng)` 相关的多余词语
+  - 增加以下词语：
+    - 耕种: `gēng zhòng`
+    - 种地: `zhòng dì`
+    - 种菜: `zhòng cài`
+    - 栽种: `zāi zhòng`
+    - 接种: `jiē zhòng`
+    - 垦种: `kěn zhòng`
+    - 种殖: `zhòng zhí`
+    - 种瓜: `zhòng guā`
+    - 种豆: `zhòng dòu`
+    - 种树: `zhòng shù`
+    - 睡着: `shuì zháo`
+    - 笼子: `lóng zi`
+    - 厦门: `xià mén`
+    - 东莞: `dōng guǎn`
 
 ## 3.13.2
 
@@ -41,7 +41,7 @@
 
 - 【feat】<b>pinyin</b>：`options.pattern` 参数新增可选值获取韵头(`finalHead`)、韵腹(`finalBody`)、韵尾(`finalTail`)的功能。 [去看看](/use/pinyin.html#韵头-介音-韵腹-韵尾)
 - 【feat】<b>pinyin</b>：`options.type` 参数新增可选值 `all` 获取拼音相关完整的信息。 [去看看](/use/pinyin.html#完整内容)
-- 【fix】<b>pinyin</b>：修复 word 参数中包含空格且 `options.type` 参数为 `array` 时输出结果错误的问题
+- 【fix】<b>pinyin</b>：修复 `text` 参数中包含空格且 `options.type` 参数为 `array` 时输出结果错误的问题
 
 ## 3.11.0
 
@@ -52,15 +52,15 @@
 ## 3.10.2
 
 - 【patch】修正部分读音:
-  - 责: 'zhài' -> 'zé zhài'
-  - 朝阳: 'zhāo cháo yáng' -> 'cháo yáng'
-  - 假发: 'jiǎ fā' -> 'jiǎ fà'
-- 【perf】优化 typescript 环境下参数提示
+  - 责: `zhài` -> `zé zhài`
+  - 朝阳: `zhāo cháo yáng` -> `cháo yáng`
+  - 假发: `jiǎ fā` -> `jiǎ fà`
+- 【perf】优化 typescript 提示
 
 ## 3.10.1
 
 - 【patch】修正部分读音:
-  - 哼: 'hng' -> 'hēng hng'
+  - 哼: `hng` -> `hēng hng`
 
 ## 3.10.0
 
@@ -73,14 +73,14 @@
 ## 3.8.3
 
 - 【patch】修正部分读音:
-  - 查岗: 'zhā gǎng' -> 'chá gǎng'
-  - 查核: 'zhā hé' -> 'chá hé'
-  - 查缉: 'zhā jī' -> 'chá jī'
-  - 查检: 'zhā jiǎn' -> 'chá jiǎn'
-  - 查看: 'zhā kàn' -> 'chá kàn'
-  - 查勤: 'zhā qín' -> 'chá qín'
-  - 查帐: 'zhā zhàng' -> 'chá zhàng'
-  - 查照: 'zhā zhào' -> 'chá zhào'
+  - 查岗: `zhā gǎng` -> `chá gǎng`
+  - 查核: `zhā hé` -> `chá hé`
+  - 查缉: `zhā jī` -> `chá jī`
+  - 查检: `zhā jiǎn` -> `chá jiǎn`
+  - 查看: `zhā kàn` -> `chá kàn`
+  - 查勤: `zhā qín` -> `chá qín`
+  - 查帐: `zhā zhàng` -> `chá zhàng`
+  - 查照: `zhā zhào` -> `chá zhào`
 
 ## 3.8.2
 
@@ -97,7 +97,7 @@
 ## 3.7.2
 
 - 【patch】修正部分读音:
-  - 物美价廉: 'jià lián wù měi' -> wù měi jià lián
+  - 物美价廉: `jià lián wù měi` -> `wù měi jià lián`
 
 ## 3.7.1
 
@@ -105,17 +105,16 @@
 
 ## 3.7.0
 
-- 【perf】新增支持 esm 引入方式
-- 【test】完善测试用例，测试覆盖率达 100%
+- 【perf】支持 esm 动态引入
 
 ## 3.6.2
 
 - 【fix】<b>pinyin</b>：修复 `customPinyin` API 和 `options.mode = surname` 同时使用时没有优先匹配自定义拼音的问题
-- 【fix】<b>pinyin</b>：修复 `options.mode = surname` 模式下部分情况姓氏拼音匹配不正确的问题
+- 【fix】<b>pinyin</b>：修复部分姓氏拼音不正确的问题
 
 ## 3.6.1
 
-- 【fix】<b>pinyin</b>：修复 `options.removeNonZh = true` 且输入字符串全部为非汉字时的堆栈溢出问题
+- 【fix】<b>pinyin</b>：修复 `options.removeNonZh = true` 且输入字符串全部为非汉字时的内存溢出问题
 
 ## 3.6.0
 
@@ -135,12 +134,12 @@
 - 【feat】新增 `customPinyin` api，支持用户自定义拼音功能。[去看看](/use/customPinyin)
 - 【fix】修复文本过长时堆栈溢出问题
 - 【patch】修正部分读音：
-  - 褚: 'zhǔ' -> 'chǔ zhǔ'
-  - 俞: 'yù' -> 'yú yù'
-  - 臧: 'zàng' -> 'zāng'
-  - 贲: 'bì' -> 'bēn bì'
-  - 莘: 'xīn' -> 'shēn xīn'
-  - 郦: 'zhí' -> 'lì zhí'
+  - 褚: `zhǔ` -> `chǔ zhǔ`
+  - 俞: `yù` -> `yú yù`
+  - 臧: `zàng` -> `zāng`
+  - 贲: `bì` -> `bēn bì`
+  - 莘: `xīn` -> `shēn xīn`
+  - 郦: `zhí` -> `lì zhí`
 
 ## 3.3.1
 
@@ -148,11 +147,11 @@
 
 ## 3.3.0
 
-- 【perf】优化拼音转换速度，经测试拼音转换速度提升近 30 倍！
+- 【perf】优化拼音转换速度，提升近 30 倍！
 
 ## 3.2.3
 
-- 【perf】typescript 环境下根据 `options.type` 值为 `'string'` 或者 `'array'`，自动提示结果为 `'string'` 还是 `'string[]'`
+- 【perf】优化 typescript 提示
 - 【perf】优化拼音转换算法，提高转换速度
 
 ## 3.2.2
@@ -162,16 +161,16 @@
 ## 3.2.1
 
 - 【patch】修复部分读音
-  - 艾: 'yì' -> 'ài yì'
-  - 吽: 'ōu' -> 'hōng hǒu ōu'
+  - 艾: `yì` -> `ài yì`
+  - 吽: `ōu` -> `hōng hǒu ōu`
 
 ## 3.2.0
 
-- 【perf】根据单字的使用频率调整字典顺序，性能大幅提升，长句的转换时间只需之前版本 50% 左右的时间
+- 【perf】根据单字的使用频率调整字典顺序以提升性能，长句的转换时间只需之前版本 50% 左右的时间
 - 【patch】修复部分读音：
-  啊: ā -> a
-  阿: ē -> ā
-- 【perf】增加浏览器中 script 的引入方式
+  - 啊: `ā` -> `a`
+  - 阿: `ē` -> `ā`
+- 【perf】支持 `<script />` 链接使用
 
 ## 3.1.0
 
@@ -208,4 +207,4 @@
 
 ## 3.0.0
 
-- 【refactor】使用 typescript + rollup 打包重构了项目，api 使用上没有发生变化
+- 【refactor】使用 typescript + rollup 重构了项目

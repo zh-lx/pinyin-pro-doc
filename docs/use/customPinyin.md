@@ -16,7 +16,7 @@ pinyin('他叫张会'); // 'tā jiào zhāng huì'
 
 ### 使用自定义拼音
 
-使用 `customPinyin` 方法，会优先使用用户自定义的拼音。
+使用 `customPinyin` 方法，可以让你自己补充这部分识别不准确的拼音。
 
 ```js
 import { pinyin, customPinyin } from 'pinyin-pro';
@@ -44,4 +44,4 @@ customPinyin(map: PinyinMap);
 
 ### 参数
 
-- `map` (必传)：object 类型，自定义的拼音映射，key 为汉字字符串，value 为独赢的拼音。
+- `map` (必传)：object 类型，自定义的拼音映射，key 为汉字字符串，value 为拼音。

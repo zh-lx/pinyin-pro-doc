@@ -1,12 +1,12 @@
 # match
 
-`pinyin-pro` 内部导出了 `match` 函数，可以进行文字和拼音匹配，并返回匹配的文字在字符串中的下标。
+`match` api can match text with pinyin and return the indexes of the matched text in the string.
 
-## 示例
+## Example
 
-### 常规匹配
+### Normal Match
 
-若拼音和文本匹配，返回匹配的文本下标
+If Pinyin matches text, return the indexes of the matching text
 
 ```js
 import { match } from 'pinyin-pro';
@@ -14,9 +14,9 @@ import { match } from 'pinyin-pro';
 match('汉语拼音', 'hanyupinyin'); // [0, 1, 2, 3]
 ```
 
-### 不连续匹配
+### Discontinuous matching
 
-支持不连续的汉字匹配，返回匹配的文本下标
+Support discontinuous Chinese character matching and return the indexes of the matching text
 
 ```js
 import { match } from 'pinyin-pro';
@@ -24,9 +24,9 @@ import { match } from 'pinyin-pro';
 match('汉语拼音', 'hanpin'); // [0, 2]
 ```
 
-### 缩写匹配
+### Abbreviation matching
 
-支持各种格式的拼音的不全拼缩写匹配汉字
+Support incomplete pinyin abbreviation matching of Chinese characters in various formats
 
 ```js
 import { match } from 'pinyin-pro';
@@ -34,9 +34,9 @@ import { match } from 'pinyin-pro';
 match('汉语拼音', 'hyupy'); // [0, 1, 2, 3]
 ```
 
-### 汉字拼音混合匹配
+### Chinese Pinyin Hybrid Matching
 
-支持汉字拼音混合匹配
+Support Chinese Pinyin hybrid matching
 
 ```js
 import { match } from 'pinyin-pro';
@@ -44,9 +44,9 @@ import { match } from 'pinyin-pro';
 match('汉语拼音', 'hyu音'); // [0, 1, 3]
 ```
 
-### 匹配不成功
+### Matching unsuccessful
 
-未匹配成功时返回 null
+Return `null` on unsuccessful matching
 
 ```js
 import { match } from 'pinyin-pro';
@@ -58,9 +58,9 @@ match('汉语拼音', 'lsaf'); // null
 match('汉语拼音', 'hanyupinle'); // null
 ```
 
-### 多音字匹配
+### Polyphonic matching
 
-对于多音字，只要其中一个读音匹配上即算匹配成功
+For polyphonic characters, as long as one of the pronunciations matches, the matching is considered successful
 
 ```js
 import { match } from 'pinyin-pro';
@@ -69,9 +69,9 @@ match('会计', 'kuaiji'); // [0, 1]
 match('会计', 'huiji'); // [0, 1]
 ```
 
-## 语法及参数
+## API
 
-### 语法
+### Function
 
 ```js
 import { match } from 'pinyin-pro';
@@ -79,7 +79,7 @@ import { match } from 'pinyin-pro';
 match(text, pinyin); // 匹配成功返回匹配汉字对应下标数组; 不成功返回 null
 ```
 
-### 参数
+### Parameters
 
-- `text` (必传)：string 类型，要匹配的文本
-- `pinyin` (必传)：string 类型，要匹配的拼音
+- `text` (required)：<b>string</b> string to match
+- `pinyin` (required)：<b>string</b> pinyin to match

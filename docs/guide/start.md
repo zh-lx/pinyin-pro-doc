@@ -2,11 +2,11 @@
 
 ## 环境
 
-`pinyin-pro` 支持各种浏览器以及 Nodejs 环境运行。
+`pinyin-pro` 支持在浏览器和 Nodejs 环境运行。
 
 ## 安装
 
-支持使用包管理器安装或者浏览器直接引入。
+`pinyin-pro` 支持使用包管理器安装或者通过 `<script />`链接引入。
 
 ### 使用包管理器
 
@@ -25,9 +25,9 @@ $ yarn add pinyin-pro
 $ pnpm install pinyin-pro
 ```
 
-### 浏览器直接引入
+### Script 链接
 
-可以通过浏览器的 `script` 标签导入 CDN 文件使用，下面以 [unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) CDN 厂商为例：
+也可以通过浏览器的 `script` 标签导入 CDN 文件使用，下面以 [unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) CDN 厂商为例：
 
 #### unpkg
 
@@ -58,14 +58,14 @@ $ pnpm install pinyin-pro
 ```
 
 ::: tip
-我们建议使用 CDN 引入 pinyin-pro 的用户在链接地址上锁定版本，以固定版本的方式引入，以免将来 pinyin-pro 升级时受到非兼容性更新的影响。
+我们建议使用 CDN 引入 `pinyin-pro` 的用户在链接地址上锁定版本，以固定版本的方式引入，以免将来 `pinyin-pro` 升级时受到非兼容性更新的影响。如果你有自己的 CDN，也建议将 `pinyin-pro` 文件下载下来托管到你自己的 CDN 上，以免第三方 CDN 不稳定带来的影响。
 :::
 
 ## 使用
 
 支持多种环境及模块化规范的使用方式。
 
-### 浏览器 ES6
+### ESM
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -73,7 +73,7 @@ import { pinyin } from 'pinyin-pro';
 pinyin('汉语拼音'); // 'hàn yǔ pīn yīn'
 ```
 
-### 浏览器 esm 动态导入
+### 动态导入
 
 ```js
 import('pinyin-pro').then((exports) => {
@@ -81,9 +81,9 @@ import('pinyin-pro').then((exports) => {
 });
 ```
 
-### 浏览器直接引入
+### Script 连接
 
-以 CDN 方式浏览器直接引入后，会在 window 全局挂载一个 `pinyinPro` 对象。
+当你使用 `<script />` 引入 `pinyin-pro` 时，会在全局(window)挂载一个名为 `pinyinPro` 变量。
 
 ```html
 <script src="https://unpkg.com/pinyin-pro"></script>
@@ -94,7 +94,7 @@ import('pinyin-pro').then((exports) => {
 </script>
 ```
 
-### Node CommonJS
+### CommonJS
 
 ```js
 const { pinyin } = require('pinyin-pro');
