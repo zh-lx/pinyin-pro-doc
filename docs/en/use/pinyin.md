@@ -1,12 +1,12 @@
-# Pinyin
+# pinyin
 
- `pinyin` api can perform pinyin conversion and obtain relevant content.
+Using `pinyin` api to convert Chinese into Pinyin and related content.
 
 ## Example
 
 ### Pinyin
 
-The `options.type` parameter controls the format of the returned result, while the `options.toneType` parameter controls the display format of tones in Pinyin.
+The `options.type` parameter controls the format of the returned value, and the `options.toneType` parameter controls the display format of tones in Pinyin.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -25,9 +25,9 @@ pinyin('汉语拼音', { toneType: 'none', type: 'array' }); // ["han", "yu", "p
 pinyin('汉语拼音', { toneType: 'num', type: 'array' }); // ["han4", "yu3", "pin1", "yin1"]
 ```
 
-### Initial consonants of Pinyin
+### Initial consonants
 
-When `options.pattern` is `initial`, the output is initial consonants of Pinyin.
+When `options.pattern` is `initial`, the returned value is initials of Pinyin.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -38,9 +38,9 @@ pinyin('汉语拼音', { pattern: 'initial' }); // 'h y p y'
 pinyin('汉语拼音', { pattern: 'initial', type: 'array' }); // ["h", "y", "p", "y"]
 ```
 
-### Vowels of Pinyin
+### Finals
 
-When `options.pattern` is `final`, the output is vowels of Pinyin.
+When `options.pattern` is `final`, the returned value is finals of Pinyin.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -61,7 +61,7 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'num', type: 'array' }); //
 
 ### Head/Essential/Tail Vowel <Badge type="tip" text="v3.12.0+" vertical="middle" />
 
-When `options.pattern` is `finalHead/finalBody/finalTail`, the output is `head vowel/essential vowel/tail vowel`.
+When `options.pattern` is `finalHead/finalBody/finalTail`, the returned value is `head vowel/essential vowel/tail vowel`.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -76,9 +76,9 @@ pinyin('村庄', { pattern: 'finalBody', type: 'array' }); // [ 'ū', 'ā' ]
 pinyin('村庄', { pattern: 'finalTail', type: 'array' }); // [ 'n', 'ng' ]
 ```
 
-### Tone of pinyin
+### Tones
 
-When `options.pattern` is `num`, the output is the tone of pinyin.
+When `options.pattern` is `num`, the returned value is the tone of pinyin.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -89,9 +89,9 @@ pinyin('汉语拼音', { pattern: 'num' }); // '4 3 1 1'
 pinyin('汉语拼音', { pattern: 'num', type: 'array' }); // ["4", "3", "1", "1"]
 ```
 
-### First character <Badge type="tip" text="v3.1.0+" vertical="middle" />
+### First Character <Badge type="tip" text="v3.1.0+" vertical="middle" />
 
-When `options.pattern` is `first`, the output is first character of pinyin.
+When `options.pattern` is `first`, the returned value is first character of pinyin.
 
 ```js
 import { pinyin } from 'pinyin-pro';
@@ -108,7 +108,7 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
 
 ### All Content <Badge type="tip" text="v3.12.0+" vertical="middle" />
 
-When `options.type` is `all`, the output is all content of pinyin in array form.
+When `options.type` is `all`, the returned value is all content of pinyin in array form.
 
 ```js
 const result = pinyin('汉语拼音', { type: 'all' });
@@ -169,7 +169,7 @@ const result = pinyin('汉语拼音', { type: 'all' });
 
 ### Multiple
 
-When `options.multiple` is `true`, the output is all Pinyins of the polyphonic character.
+When `options.multiple` is `true`, the returned value is all Pinyins of the polyphonic character.
 
 This only takes effect when the length of the `text` parameter equals `1`.
 
@@ -186,7 +186,7 @@ pinyin('好学', { multiple: true }); // hào xué
 
 ### Surname Mode <Badge type="tip" text="v3.4.0+" vertical="middle" />
 
-When `options.mode` is `surname`, the surname mode will be enabled. In this mode, when matching Chinese characters related to surnames, priority will be given to outputting surname pinyin
+When `options.mode` is `surname`, the surname mode will be enabled. In this mode, when matching Chinese characters related to surnames, priority will be given to outputting surname pinyin.
 
 ```javascript
 import { pinyin } from 'pinyin-pro';
@@ -198,9 +198,9 @@ pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
 pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
 ```
 
-### Non Chinese Character <Badge type="tip" text="v3.8.0+" vertical="middle" />
+### NonZh Character <Badge type="tip" text="v3.8.0+" vertical="middle" />
 
-`options.nonZh` can configure the output format of non Chinese characters.
+`options.nonZh` can configure the returned value's format of non Chinese characters.
 
 ```javascript
 import { pinyin } from 'pinyin-pro';
@@ -217,7 +217,7 @@ pinyin('我very喜欢你', { nonZh: 'consecutive' }); // 'wǒ very xǐ huān nǐ
 
 ### Replace `ü` by `v` <Badge type="tip" text="v3.9.0+" vertical="middle" />
 
-When `options.v` is `true`, the `ü` in output will be replaced by `v`. (`ǖ,ǘ,ǚ,ǜ` with tone won't be replaced)：
+When `options.v` is `true`, the `ü` in returned value will be replaced by `v`. (`ǖ,ǘ,ǚ,ǜ` with tone won't be replaced)：
 
 ```javascript
 import { pinyin } from 'pinyin-pro';

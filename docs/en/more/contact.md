@@ -1,8 +1,8 @@
-# More
+# Contact Me
 
-Welcome to issue if you encounter any problems or require functional support
+Welcome to issue on github if you encounter any problems or require functional support.
 
-Welcome to join `pinyin-pro` user group or my WeChat for technical communication:
+Welcome to join `pinyin-pro` user group or friend my WeChat for technical communication:
 
 <div style="display: flex;">
   <img src="https://user-images.githubusercontent.com/73059627/226233976-5dbb9daa-6620-4d16-a2b0-359055dcafe1.png" width="200" >

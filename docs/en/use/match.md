@@ -1,12 +1,12 @@
 # match
 
-`match` api can match text with pinyin and return the indexes of the matched text in the string.
+Using `match` api to match Chinese text string with pinyin string.
 
 ## Example
 
 ### Normal Match
 
-If Pinyin matches text, return the indexes of the matching text
+If Pinyin matches text, return the indexes of the matching text.
 
 ```js
 import { match } from 'pinyin-pro';
@@ -46,7 +46,7 @@ match('汉语拼音', 'hyu音'); // [0, 1, 3]
 
 ### Matching unsuccessful
 
-Return `null` on unsuccessful matching
+Return `null` on unsuccessful matching.
 
 ```js
 import { match } from 'pinyin-pro';
@@ -60,7 +60,7 @@ match('汉语拼音', 'hanyupinle'); // null
 
 ### Polyphonic matching
 
-For polyphonic characters, as long as one of the pronunciations matches, the matching is considered successful
+For polyphonic characters, as long as one of the pronunciations matches, the matching is considered successful.
 
 ```js
 import { match } from 'pinyin-pro';

@@ -82,6 +82,8 @@ onMounted(() => {
   :deep(.code_editor_view) {
     margin: 0 !important;
     padding: 10px 10px 10px 35px !important;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace !important;
   }
   :deep(.code_set_w) {
     display: none;
