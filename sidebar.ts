@@ -14,6 +14,7 @@ const sidebar = {
         { text: 'pinyin: 拼音转换', link: '/use/pinyin.md' },
         { text: 'match: 拼音汉字匹配', link: '/use/match.md' },
         { text: 'customPinyin: 自定义拼音', link: '/use/customPinyin.md' },
+        { text: 'html: HTML字符串', link: '/use/html.md' },
       ],
     },
     {
