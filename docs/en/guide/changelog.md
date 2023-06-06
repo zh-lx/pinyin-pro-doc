@@ -1,5 +1,31 @@
 # ChangeLog
 
+## 3.15.0
+
+- 【feat】 Add `html` API to get a HTML string of Chinese characters and Pinyin
+- 【feat】 Add `polyphonic` API to get all Pinyins of Chinese characters
+- 【feat】 Rewrite `match` API, add parameter to control matching rules
+- 【patch】Correct the Pinyin of Some Chinese characters and words:
+  - 屏: `bīng píng bǐng` -> `píng bǐng bīng`
+  - 呒: `ḿ` -> `fǔ ḿ`
+  - 吋: `cùn yīngcùn` -> `cùn dòu`
+  - 呎: `chǐ yīngchǐ` -> `chǐ`
+  - 蝊: `uu` -> `dìng`
+  - 噷: `hm hěn xīn hèn` -> `xīn hěn hèn`
+  - 唡: `liǎng yīngliǎng` -> `liǎng`
+  - 曢: `uu` -> `liǎo`
+  - 呣: `ḿ m̀` -> `ḿ m̀ móu`
+  - 聁: `uu` -> `pàn`
+  - 闧: `uu` -> `tā`
+  - 屗: `uu` -> `wěi`
+  - 虲: `uu` -> `xiā`
+  - 屏气吞声: `píng qì tūn shēng` -> `bǐng qì tūn shēng`
+  - 敛声屏息: `liǎn shēng píng xī` -> `liǎn shēng bǐng xī`
+  - Remove the following Chinese characters:
+    - 瓸: 'bǎiwǎ'
+  - Add the following Chinese words:
+    - 好好: `hǎo hǎo`
+
 ## 3.14.0
 
 - 【refactor】Using [Aho–Corasick_algorithm](https://en.wikipedia.org/wiki/Aho–Corasick_algorithm) to optimize pinyin matching speed and improve performance by nearly 50 times!

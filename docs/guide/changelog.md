@@ -1,10 +1,36 @@
 # 更新日志
 
+## 3.15.0
+
+- 【feat】 新增 `html` API，用于获取带拼音汉字的 HTML 字符串
+- 【feat】 新增 `polyphonic` API，用于汉字的全部读音
+- 【feat】 重写 `match` API，增加参数控制匹配规则
+- 【patch】校正部分汉字及词汇的拼音：
+  - 屏: `bīng píng bǐng` -> `píng bǐng bīng`
+  - 呒: `ḿ` -> `fǔ ḿ`
+  - 吋: `cùn yīngcùn` -> `cùn dòu`
+  - 呎: `chǐ yīngchǐ` -> `chǐ`
+  - 蝊: `uu` -> `dìng`
+  - 噷: `hm hěn xīn hèn` -> `xīn hěn hèn`
+  - 唡: `liǎng yīngliǎng` -> `liǎng`
+  - 曢: `uu` -> `liǎo`
+  - 呣: `ḿ m̀` -> `ḿ m̀ móu`
+  - 聁: `uu` -> `pàn`
+  - 闧: `uu` -> `tā`
+  - 屗: `uu` -> `wěi`
+  - 虲: `uu` -> `xiā`
+  - 屏气吞声: `píng qì tūn shēng` -> `bǐng qì tūn shēng`
+  - 敛声屏息: `liǎn shēng píng xī` -> `liǎn shēng bǐng xī`
+  - 删除以下字词：
+    - 瓸: 'bǎiwǎ'
+  - 增加以下词语：
+    - 好好: `hǎo hǎo`
+
 ## 3.14.0
 
 - 【refactor】使用 [AC 自动机算法](https://en.wikipedia.org/wiki/Aho–Corasick_algorithm)优化拼音匹配速度，性能提升近 50 倍！
 - 【patch】校正部分汉字及词汇的拼音：
-  - 种: 'zhòng zhǒng chóng' -> 'zhǒng zhòng chóng'
+  - 种: `zhòng zhǒng chóng` -> `zhǒng zhòng chóng`
   - 去掉 `种(zhǒng)` 相关的多余词语
   - 增加以下词语：
     - 耕种: `gēng zhòng`

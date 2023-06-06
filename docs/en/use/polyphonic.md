@@ -1,6 +1,6 @@
 # polyphonic <Badge type="tip" text="v3.15.0+" vertical="middle" />
 
-Use the `polyphonic` API to get all Pinyins of polyphonic Chinese characters.
+Use the `polyphonic` API to get all Pinyins of Chinese characters.
 
 ::: tip
 In most cases, you only need to use the [pinyin](/use/pinyin.md) API, which automatically recognizes the correct pinyin of polyphonic Chinese characters in text. `polyphonic` is used to get all Pinyins of each Chinese characters, rather than the correct Pinyin of polyphonic Chinese words in a sentence.
