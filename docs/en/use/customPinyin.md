@@ -39,7 +39,7 @@ interface PinyinMap {
   [key: string]: string;
 }
 
-customPinyin(map: PinyinMap);
+function customPinyin(map: PinyinMap);
 ```
 
 ### Parameters

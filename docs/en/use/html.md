@@ -61,12 +61,12 @@ The preview of the `htmlString` in the browser is as follows:
 
 ### Without Tone
 
-When the value of the `tone` attribute is `true`, the Pinyin in the returned value has no tone.
+When set the value of the `toneType` attribute to `none`, the Pinyin in the returned value has no tone.
 
 ```js
 import { html } from 'pinyin-pro';
 
-const htmlString = html('汉语拼音', { tone: false });
+const htmlString = html('汉语拼音', { toneType: 'none' });
 
 /*
 <span class="py-result-item">
@@ -163,48 +163,48 @@ function html(text: string, options?: HtmlOptions): string {}
         <th>Type</th>
         <th>Description</th>
         <th>Optional Values</th>
-        <th>Default Value</th>
+        <th width="180">Default Value</th>
     </tr>
     <tr>
         <td>resultClass</td>
         <td>string</td>
-        <td>class of the outermost &lt;span&gt; tag of Chinese characters and pinyin</td>
+        <td>class of the outermost <code>&lt;span&gt;</code> tag of Chinese characters and pinyin</td>
         <td>-</td>
         <td>py-result-item</td>
     </tr>
     <tr>
         <td>pinyinClass</td>
         <td>string</td>
-        <td>class of the outer &lt;rt&gt; tag of Pinyin</td>
+        <td>class of the outer <code>&lt;rt&gt;</code> tag of Pinyin</td>
         <td>-</td>
         <td>py-pinyin-item</td>
     </tr>
     <tr>
         <td>chineseClass</td>
         <td>string</td>
-        <td>class of the outer &lt;span&gt; tag of Chinese character</td>
+        <td>class of the outer <code>&lt;span&gt;</code> tag of Chinese character</td>
         <td>-</td>
         <td>py-chinese-item</td>
     </tr>
     <tr>
         <td>wrapNonChinese</td>
         <td>string</td>
-        <td>Whether use &lt;span&gt; to wrap non Chinese characters. If you want to do some custom style processing for non Chinese characters, it is recommended to set it to true; If the input text parameter is also an HTML string, it is recommended to set it to false to prevent affecting the structure of the text.</td>
-        <td>true/false</td>
+        <td>Whether use <code>&lt;span&gt;</code> to wrap non Chinese characters. If you want to do some custom style processing for non Chinese characters, it is recommended to set it to <code>true</code>; If the input text parameter is also an HTML string, it is recommended to set it to <code>false</code> to prevent affecting the structure of the text.</td>
+        <td><code>true/false</code></td>
         <td>false</td>
     </tr>
     <tr>
         <td>nonChineseClass</td>
         <td>string</td>
-        <td>class of the outer &lt;span&gt; tag of non Chinese character(Only when the value of wrapNonChinese is true, it is work.)</td>
+        <td>class of the outer <code>&lt;span&gt;</code> tag of non Chinese character(Only when the value of <code>wrapNonChinese</code> is <code>true</code>, it is work.)</td>
         <td>-</td>
         <td>py-non-chinese-item</td>
     </tr>
     <tr>
-        <td>tone</td>
-        <td>boolean</td>
-        <td>Whether the tone in Pinyin should be displayed.</td>
-        <td>true/false</td>
-        <td>true</td>
+        <td>toneType</td>
+        <td>string</td>
+        <td>the display form of tones in Pinyin</td>
+        <td><code>symbol/none/num</code></td>
+        <td>symbol</td>
     </tr>
 </table>

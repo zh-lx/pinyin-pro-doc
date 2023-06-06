@@ -61,12 +61,12 @@ const htmlString = html('汉语拼音');
 
 ### 不带音调
 
-当设置 `tone` 属性的值为 `true` 时，返回值中的拼音是不带音调的。
+当设置 `toneType` 属性的值为 `none` 时，返回值中的拼音是不带音调的。
 
 ```js
 import { html } from 'pinyin-pro';
 
-const htmlString = html('汉语拼音', { tone: false });
+const htmlString = html('汉语拼音', { toneType: 'none' });
 
 /*
 <span class="py-result-item">
@@ -163,48 +163,48 @@ function html(text: string, options?: HtmlOptions): string {}
         <th>类型</th>
         <th>描述</th>
         <th>可选值</th>
-        <th>默认值</th>
+        <th width="180">默认值</th>
     </tr>
     <tr>
         <td>resultClass</td>
         <td>string</td>
-        <td>汉字和拼音最外层 &lt;span&gt; 标签的类名</td>
+        <td>汉字和拼音最外层 <code>&lt;span&gt;</code> 标签的类名</td>
         <td>-</td>
         <td>py-result-item</td>
     </tr>
     <tr>
         <td>pinyinClass</td>
         <td>string</td>
-        <td>拼音外层 &lt;rt&gt; 标签的类名</td>
+        <td>拼音外层 <code>&lt;rt&gt;</code> 标签的类名</td>
         <td>-</td>
         <td>py-pinyin-item</td>
     </tr>
     <tr>
         <td>chineseClass</td>
         <td>string</td>
-        <td>汉字外层 &lt;span&gt; 标签的类名</td>
+        <td>汉字外层 <code>&lt;span&gt;</code> 标签的类名</td>
         <td>-</td>
         <td>py-chinese-item</td>
     </tr>
     <tr>
         <td>wrapNonChinese</td>
         <td>boolean</td>
-        <td>是否用 &lt;span&gt; 标签包裹非汉字字符。如果是要对非汉字字符也做一些自定义样式处理，建议设置为 true；如果输入的 text 参数本身也是一个 HTML 字符串，建议设置为 false 以防止影响 text 本身的结构</td>
-        <td>true/false</td>
+        <td>是否用 <code>&lt;span&gt;</code> 标签包裹非汉字字符。如果是要对非汉字字符也做一些自定义样式处理，建议设置为 <code>true</code>; 如果 text 参数本身也是一个 HTML 字符串，建议设置为 <code>false</code> 以防止影响 text 本身的结构</td>
+        <td><code>true/false</code></td>
         <td>false</td>
     </tr>
     <tr>
         <td>nonChineseClass</td>
         <td>string</td>
-        <td>非汉字字符外层 &lt;span&gt; 标签的类名（仅在 wrapNonChinese 值为 true 时有效）</td>
+        <td>非汉字字符外层 <code>&lt;span&gt;</code> 标签的类名（仅在 <code>wrapNonChinese</code> 值为 <code>true</code> 时有效）</td>
         <td>-</td>
         <td>py-non-chinese-item</td>
     </tr>
     <tr>
-        <td>tone</td>
-        <td>boolean</td>
-        <td>是否显示拼音的音调</td>
-        <td>true/false</td>
-        <td>true</td>
+        <td>toneType</td>
+        <td>string</td>
+        <td>拼音中音调的显示形式</td>
+        <td><code>symbol/none/num</code></td>
+        <td>symbol</td>
     </tr>
 </table>

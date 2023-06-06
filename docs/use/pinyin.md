@@ -239,7 +239,32 @@ pinyin('吕布', { type: 'num', v: true }); // lv3 bu4
 ```js
 import { pinyin } from 'pinyin-pro';
 
-pinyin(text, options); // 返回转换后的信息
+interface BasicOptions {
+    type: 'string' | 'array' | 'all';
+    toneType?: 'symbol' | 'num' | 'none';
+    pattern?: 'pinyin' | 'initial' | 'final' | 'num' | 'first' | 'finalHead' | 'finalBody' | 'finalTail';
+    multiple?: boolean;
+    mode?: 'normal' | 'surname';
+    removeNonZh?: boolean;
+    nonZh?: 'spaced' | 'consecutive' | 'removed';
+    v?: boolean;
+}
+
+interface AllData {
+    origin: string;
+    pinyin: string;
+    initial: string;
+    final: string;
+    num: number;
+    first: string;
+    finalHead: string;
+    finalBody: string;
+    finalTail: string;
+    isZh: boolean;
+}
+
+ // 返回转换后的信息
+function pinyin(text: string, options?: BasicOptions): string | string[] | AllData[]
 ```
 
 ### 参数

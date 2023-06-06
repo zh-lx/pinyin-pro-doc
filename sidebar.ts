@@ -15,6 +15,7 @@ const sidebar = {
         { text: 'match: 拼音汉字匹配', link: '/use/match.md' },
         { text: 'customPinyin: 自定义拼音', link: '/use/customPinyin.md' },
         { text: 'html: HTML字符串', link: '/use/html.md' },
+        { text: 'polyphonic: 全部读音', link: '/use/polyphonic.md' },
       ],
     },
     {
@@ -41,6 +42,7 @@ const sidebar = {
         { text: 'pinyin', link: '/en/use/pinyin.md' },
         { text: 'match', link: '/en/use/match.md' },
         { text: 'customPinyin', link: '/en/use/customPinyin.md' },
+        { text: 'html', link: '/en/use/html.md' },
       ],
     },
     {
