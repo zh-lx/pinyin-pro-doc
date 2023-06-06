@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import beautify from 'json-beautify';
-import { pinyin, match, customPinyin } from 'pinyin-pro';
+import { pinyin, match, customPinyin, html, polyphonic } from 'pinyin-pro';
 import TCEditor from 'tc-editor';
 import { useRoute } from 'vue-router';
 
@@ -40,6 +40,10 @@ window.pinyin = pinyin;
 window.match = match;
 //  @ts-ignore
 window.customPinyin = customPinyin;
+// @ts-ignore
+window.html = html;
+//  @ts-ignore
+window.polyphonic = polyphonic;
 const log = console.log;
 
 console.log = (result) => {
