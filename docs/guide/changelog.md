@@ -1,5 +1,21 @@
 # 更新日志
 
+## 3.15.4
+
+- 【optimize】 esm 打包取消压缩混淆，解决 tree-shaking 使用失效问题
+
+## 3.15.3
+
+- 【fix】 解决 rollup 打包后的 `.d.ts` 文件依然保留 alias 路径引用问题
+
+## 3.15.2
+
+- 【fix】 优化 `esm` 打包格式，解决部分 node 环境中引用报错问题
+
+## 3.15.1
+
+- 【fix】 修复 `package.json` 文件中 `types` 路径指向错误问题
+
 ## 3.15.0
 
 - 【feat】 新增 `html` API，用于获取带拼音汉字的 HTML 字符串

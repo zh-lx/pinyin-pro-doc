@@ -1,7 +1,7 @@
 import { webpackBundler } from '@vuepress/bundler-webpack';
 import { defineUserConfig } from '@vuepress/cli';
 // import WriteTheme from './node_modules/vuepress-theme-write';
-import WriteTheme from './vuepress-theme-write/src/node/index';
+import WriteTheme from './vuepress-theme-write/lib/node/index';
 import sidebar from './sidebar';
 import { getDirname, path } from '@vuepress/utils';
 

@@ -1,5 +1,21 @@
 # ChangeLog
 
+## 3.15.4
+
+- 【optimize】 `esm` eliminates compression confusion and solves the issue of ineffective use of tree shading
+
+## 3.15.3
+
+- 【fix】 Resolve the issue of retaining alias path in `.d.ts` file
+
+## 3.15.2
+
+- 【fix】 Optimize the `esm` build format to solve the issue of referencing errors in some node environments
+
+## 3.15.1
+
+- 【fix】 Fix the `types` references in `package.json`
+
 ## 3.15.0
 
 - 【feat】 Add `html` API to get a HTML string of Chinese characters and Pinyin
