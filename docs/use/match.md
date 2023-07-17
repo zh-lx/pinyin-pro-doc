@@ -11,7 +11,7 @@
 ```js
 import { match } from 'pinyin-pro';
 
-function match(text: string, pinyin: string， options?: MatchOptions): number[] | null;; // [0, 1, 2, 3]
+match('汉语拼音', 'hanyupinyin'); // [0, 1, 2, 3]
 ```
 
 ### 是否连续
