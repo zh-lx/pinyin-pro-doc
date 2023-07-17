@@ -220,6 +220,19 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     ],
   },
   {
+    option: 'separator',
+    type: 'string',
+    description: '拼音之间的分隔符',
+    default: '空格',
+    children: [
+      {
+        value: '-',
+        desc: '拼音之间的分隔符',
+        example: `pinyin('汉语拼音', { separator: '-' }); // 'hàn-yǔ-pīn-yīn'`,
+      },
+    ],
+  },
+  {
     option: 'mode',
     type: 'string',
     description: '拼音优先匹配的库模式',
@@ -335,7 +348,7 @@ th {
   width: 800px !important;
   * {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+      monospace !important;
   }
 }
 

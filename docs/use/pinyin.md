@@ -198,6 +198,16 @@ pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
 pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
 ```
 
+### 自定义分隔符 <Badge type="tip" text="v3.16.0+" vertical="middle" />
+
+使用 `options.separator` 自定义拼音之间的分隔符，仅在 `type: 'string'` 时生效：
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+
+pinyin('汉语拼音', { separator: '-' }); // 'hàn-yǔ-pīn-yīn'
+```
+
 ### 非汉字字符处理 <Badge type="tip" text="v3.8.0+" vertical="middle" />
 
 设置 `options.nonZh` ，可以处理非汉字字符的不同输出形式

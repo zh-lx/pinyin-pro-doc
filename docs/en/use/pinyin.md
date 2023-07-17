@@ -198,6 +198,16 @@ pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
 pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
 ```
 
+### Customize Separator <Badge type="tip" text="v3.16.0+" vertical="middle" />
+
+Use `options.separator` to customize separator between pinyins, only effective when `type: 'string'`：
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+
+pinyin('汉语拼音', { separator: '-' }); // 'hàn-yǔ-pīn-yīn'
+```
+
 ### NonZh Character <Badge type="tip" text="v3.8.0+" vertical="middle" />
 
 `options.nonZh` can configure the returned value's format of non Chinese characters.

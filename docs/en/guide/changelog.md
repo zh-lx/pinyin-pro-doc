@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.16.0
+
+- 【feature】`pinyin` api 新增 `separator` 参数，用于支持拼音之间自定义分隔符（仅当 `type: 'string'` 时生效）
+
 ## 3.15.4
 
 - 【optimize】 `esm` eliminates compression confusion and solves the issue of ineffective use of tree shading

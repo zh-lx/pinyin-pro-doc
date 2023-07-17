@@ -107,6 +107,12 @@ watch(
     max-height: 70vh;
     padding: 16px;
     overflow: auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace !important;
+    :deep(pre) {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace !important;
+    }
   }
 }
 </style>
