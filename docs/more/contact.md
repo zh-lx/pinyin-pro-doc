@@ -1,8 +1,6 @@
 # 交流
 
-使用遇到问题或者需要功能支持欢迎提 issue。
-
-技术交流欢迎加 pinyin-pro 用户群 或者微信：
+任何使用问题可以加入 QQ 群 `1042725850` 或者添加作者微信 `zhoulx1688888` 进行咨询与反馈:
 
 <div style="display: flex;">
   <img src="https://user-images.githubusercontent.com/73059627/226233976-5dbb9daa-6620-4d16-a2b0-359055dcafe1.png" width="200" >

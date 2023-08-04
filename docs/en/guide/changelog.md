@@ -1,8 +1,19 @@
 # ChangeLog
 
+## 3.16.2
+
+- 【patch】Add following Chinese characters and Pinyin in surname mode:
+  - 肖: `xiāo`
+
+## 3.16.1
+
+- 【patch】Correct the Pinyin of following Chinese characters:
+
+  - 苹: `pín` -> `píng`
+
 ## 3.16.0
 
-- 【feature】`pinyin` api 新增 `separator` 参数，用于支持拼音之间自定义分隔符（仅当 `type: 'string'` 时生效）
+- 【feature】Add parameter `separator` of `pinyin` api to customize separator between pinyins, only effective when `type: 'string'`.
 
 ## 3.15.4
 
