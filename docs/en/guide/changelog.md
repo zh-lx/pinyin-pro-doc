@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.16.3
+
+- 【optimize】Optimize the construction time of initializing AC automata
+
 ## 3.16.2
 
 - 【patch】Add following Chinese characters and Pinyin in surname mode:
