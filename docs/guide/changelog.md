@@ -1,5 +1,21 @@
 # 更新日志
 
+## 3.16.6
+
+- 【patch】词库添加以下词语：
+  - 嘴巴: 'zuǐ ba',
+  - 耳朵: 'ěr duo',
+  - 茄子: 'qié zi',
+
+## 3.16.5
+
+- 【patch】亲戚称谓及"子"相关读音校正，详见[863c2e9](https://github.com/zh-lx/pinyin-pro/commit/863c2e99e89a40fbf4d17d5b0449b1d7e7f309ec)
+
+## 3.16.4
+
+- 【patch】词库添加以下词语：
+  - 重启: `chóng qǐ`
+
 ## 3.16.3
 
 - 【optimize】优化初始化 AC 自动机的构建时间
