@@ -1,5 +1,21 @@
 # ChangeLog
 
+## 3.16.6
+
+- 【patch】Add the following words to directory：
+  - 嘴巴: 'zuǐ ba',
+  - 耳朵: 'ěr duo',
+  - 茄子: 'qié zi',
+
+## 3.16.5
+
+- 【patch】Correct pronunciation related to relatives and '子'. For details, please refer to[863c2e9](https://github.com/zh-lx/pinyin-pro/commit/863c2e99e89a40fbf4d17d5b0449b1d7e7f309ec)
+
+## 3.16.4
+
+- 【patch】Add the following words to directory：
+  - 重启: `chóng qǐ`
+
 ## 3.16.3
 
 - 【optimize】Optimize the construction time of initializing AC automata
