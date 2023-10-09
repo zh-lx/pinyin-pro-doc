@@ -1,5 +1,19 @@
 # ChangeLog
 
+## 3.17.0
+
+- 【feat】Add `convert` API to convert the format of pinyin
+
+## 3.16.7
+
+- 【patch】Add the following words to directory：
+  - 成都: `chéng dū`
+  - 都城: `dū chéng`
+  - 六安: `lù ān`
+  - 蚌埠: `bèng bù`
+  - 崆峒: `kōng tóng`
+  - 都江堰: `dū jiāng yàn`
+
 ## 3.16.6
 
 - 【patch】Add the following words to directory：
