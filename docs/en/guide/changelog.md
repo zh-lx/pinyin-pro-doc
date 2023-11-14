@@ -1,5 +1,31 @@
 # ChangeLog
 
+## 3.18.0
+
+- 【feat】<b>match</b>：An `insensitive` option has been added to set case-insensitive, default value is `true`
+- 【patch】Add the following words to directory：
+  - 琵琶: `pí pa`
+  - 蘑菇: `mó gu`
+  - 葫芦: `hú lu`
+  - 狐狸: `hú li`
+  - 桔子: `jú zi`
+  - 盒子: `hé zi`
+  - 桌子: `zhuō zi`
+  - 竹子: `zhú zi`
+  - 师傅: `shī fu`
+  - 衣服: `yī fu`
+  - 袜子: `wà zi`
+  - 杯子: `bēi zi`
+  - 刺猬: `cì wei`
+  - 麦子: `mài zi`
+  - 队伍: `duì wu`
+  - 知了: `zhī liao`
+  - 鱼儿: `yú er`
+  - 馄饨: `hún tun`
+  - 灯笼: `dēng long`
+  - 庄稼: `zhuāng jia`
+  - 聪明: `cōng ming`
+
 ## 3.17.0
 
 - 【feat】Add `convert` API to convert the format of pinyin
