@@ -1,5 +1,14 @@
 # ChangeLog
 
+## 3.18.3
+
+- 【patch】Correct and add the following words to directory：
+  - 衒玉贾石: `zuì yù jiǎ shí` -> `zuì yù gǔ shí`
+  - 了却: `liǎo què`
+  - 力气: `lì qi`
+  - 席子: `xí zi`
+  - 林子: `lín zi`
+
 ## 3.18.2
 
 - 【patch】Correct and add the following words to directory：
