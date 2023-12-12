@@ -1,5 +1,23 @@
 # ChangeLog
 
+## 3.18.5
+
+- 【patch】Correct the following words in directory：
+
+  ```diff
+  否极泰来: 'pǐ jí tài lái', // [!code --]
+  否往泰来: 'pǐ wǎng tài lái', // [!code --]
+  否去泰来: 'pǐ qù tài lái', // [!code --]
+  否极泰回: 'pǐ jí tài huí', // [!code --]
+  泰来否往: 'tài lái pǐ wǎng', // [!code --]
+  泰来否极: 'tai lái fǒu jí', // [!code --]
+  唯唯否否: 'wěi wěi fǒu fǒu', // [!code --]
+  臧否: 'zāng pǐ', // [!code ++]
+  否泰: 'pǐ tài', // [!code ++]
+  否极泰: 'pǐ jí tài', // [!code ++]
+  泰来否: 'tài lái pǐ', // [!code ++]
+  ```
+
 ## 3.18.4
 
 - 【patch】Correct the following words in directory：
