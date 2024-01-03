@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 3.18.6
+
+- 【patch】Correct the following words in directory, for more details please see [#148](https://github.com/zh-lx/pinyin-pro/pull/148)
+- 【fix】<b>convert</b>: support input `v`, for example: `lv4 se4` -> `lǜ sè`
+
 ## 3.18.5
 
 - 【patch】Correct the following words in directory：
