@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.19.0
+
+- 【Feature】: `customPinyin`: `customPinyin` now supports applying to `multiple` and `polyphonic`.
+
 ## 3.18.6
 
 - 【patch】Correct the following words in directory, for more details please see [#148](https://github.com/zh-lx/pinyin-pro/pull/148)
