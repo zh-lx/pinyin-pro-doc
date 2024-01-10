@@ -28,7 +28,7 @@ customPinyin({
 pinyin('他叫张会'); // 'tā jiào zhāng kuài'
 ```
 
-### 对 multiple 和 polyphonic 生效
+### 对 multiple 和 polyphonic 生效 <Badge type="tip" text="v3.19.0+" vertical="middle" />
 
 通过在 `customPinyin` 的第二个参数中追加 `multiple` 和 `polyphonic`，可以使其对 `multiple` 和 `polyphonic` 生效。
 
@@ -36,7 +36,6 @@ pinyin('他叫张会'); // 'tā jiào zhāng kuài'
 
 ```js
 // 追加的示例
-
 customPinyin({
   张会: 'zhāng huài',
 }, {
@@ -52,7 +51,6 @@ polyphonic('张会'); // ["zhāng", "huì kuài huài"]
 
 ```js
 // 替换的示例
-
 customPinyin({
   张会: 'zhāng huài',
 }, {
@@ -66,7 +64,7 @@ pinyin('会', { multiple: true }); // 'huài' (替换为 huài)
 polyphonic('张会'); // ["zhāng", "huài"]
 ```
 
-### 清除原自定义的数据
+### 清除原自定义的数据 <Badge type="tip" text="v3.19.0+" vertical="middle" />
 
 默认情况下，多次调用 `customPinyin` 补充的数据会累积叠加，可以调用 `clearCustomDict` 对原数据进行清除。
 
@@ -100,13 +98,7 @@ type CustomHandleType = 'add' | 'replace';
 type CustomDictType = 'pinyin' | 'multiple' | 'polyphonic';
 
 interface CustomPinyinOptions {
-  /**
-   * @description: multiple 对于 customPinyin 补充词汇的处理
-   */
   multiple?: CustomHandleType;
-  /**
-   * @description: polyphonic 对于 customPinyin 补充词汇的处理
-   */
   polyphonic?: CustomHandleType;
 }
 
