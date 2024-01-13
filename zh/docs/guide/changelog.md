@@ -1,5 +1,43 @@
 # 更新日志
 
+## 3.19.1
+
+- 【patch】词库修正以下词语：
+
+  ```diff
+  那些: 'nèi xiē', // [!code --]
+  皇上: 'huáng shang', // [!code --]
+  太监: 'tài jiàn', // [!code --]
+  审查: 'shěn zhā', // [!code --]
+  只得: 'zhǐ de', // [!code --]
+  哪些: 'něi xiē', // [!code --]
+  一处: 'yī chǔ', // [!code --]
+  大夫: 'dài fū', // [!code --]
+  便宜: 'pián yí', // [!code --]
+  哪个: 'něi gè', // [!code --]
+  肚子: 'dǔ zi', // [!code --]
+  难得: 'nán de', // [!code --]
+  晓得: 'xiǎo de', // [!code --]
+  寻思: 'xín sī', // [!code --]
+  夺得: 'duó de', // [!code --]
+  巴结: 'bā jì', // [!code --]
+  了得: 'liǎo de', // [!code --]
+  行家: 'háng jia', // [!code --]
+  当夜: 'dàng yè', // [!code --]
+  皇上: 'huáng shàng', // [!code ++]
+  太监: 'tài jian', // [!code ++]
+  审查: 'shěn chá', // [!code ++]
+  大夫: 'dài fu', // [!code ++]
+  便宜: 'pián yi', // [!code ++]
+  难得: 'nán dé', // [!code ++]
+  晓得: 'xiǎo dé', // [!code ++]
+  寻思: 'xún si ', // [!code ++]
+  夺得: 'duó dé', // [!code ++]
+  巴结: 'bā jié', // [!code ++]
+  了得: 'liǎo dé', // [!code ++]
+  行家: 'háng jiā', // [!code ++]
+  ```
+
 ## 3.19.0
 
 - 【feat】`customPinyin`: `customPinyin` 支持对 `multiple` 和 `polyphonic` 生效
