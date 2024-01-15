@@ -1,5 +1,14 @@
 # ChangeLog
 
+## 3.19.2
+
+- 【patch】Correct the following words in directory:
+
+  ```diff
+  止咳: 'zhǐ ké',  // [!code ++]
+  咳特灵: 'ké tè líng',  // [!code ++]
+  ```
+
 ## 3.19.1
 
 - 【patch】Correct the following words in directory:
