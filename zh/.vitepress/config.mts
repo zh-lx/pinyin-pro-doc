@@ -6,6 +6,9 @@ export default defineConfig({
   description: '性能优异、转换准确的 js 中文转拼音工具',
   srcDir: './docs',
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     logo: '/images/pinyin-logo.png',
     footer: {
       message:

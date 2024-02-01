@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.19.4
+
+- 【fix】Fixed the issue of incorrect conversion of non-Chinese characters under the `toneType: none` parameter. [#156](https://github.com/zh-lx/pinyin-pro/issues/156)
+
 ## 3.19.3
 
 - 【patch】Correct the directory：[434cf51cd](https://github.com/zh-lx/pinyin-pro/commit/434cf51cd7c7f2a50365bfbe142c70ca93bc2344)

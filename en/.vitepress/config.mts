@@ -8,6 +8,9 @@ export default defineConfig({
     'Excellent performance and accurate conversion of JS Chinese Pinyin tool',
   srcDir: './docs',
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     logo: '/images/pinyin-logo.png',
     footer: {
       message:
