@@ -8,6 +8,7 @@ import BasicParamsTable from './components/basic-params-table.vue';
 import HTMLBasicDemo from './components/html-basic-demo.vue';
 import HTMLStyleDemo from './components/html-style-demo.vue';
 import HTMLNoToneDemo from './components/html-no-tone-demo.vue';
+import htmlCustomClassDemo from './components/html-custom-class-demo.vue';
 
 export default {
   extends: DefaultTheme,
@@ -22,5 +23,6 @@ export default {
     app.component('html-basic-demo', HTMLBasicDemo);
     app.component('html-style-demo', HTMLStyleDemo);
     app.component('html-no-tone-demo', HTMLNoToneDemo);
+    app.component('html-custom-class-demo', htmlCustomClassDemo);
   },
 } satisfies Theme;

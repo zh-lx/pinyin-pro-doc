@@ -133,6 +133,70 @@ const htmlString = html('汉语拼音');
 
 <html-style-demo></html-style-demo>
 
+### 指定文字样式
+
+可以通过 `customClassMap` 参数对于指定字符应用单独的样式。如下面的例子中，让 `汉` 部分为红色，`音` 部分为蓝色。
+
+```js
+import { html } from 'pinyin-pro';
+
+const htmlString = html('汉语拼音', {
+  customClassMap: {
+    'red-item': ['汉'],
+    'blue-item': ['音'],
+  },
+});
+
+/*
+<span class="py-result-item red-item">
+	<ruby>
+		<span class="py-chinese-item">汉</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">hàn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item">
+	<ruby>
+		<span class="py-chinese-item">语</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">yǔ</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item">
+	<ruby>
+		<span class="py-chinese-item">拼</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">pīn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item blue-item">
+	<ruby>
+		<span class="py-chinese-item">音</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">yīn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+*/
+```
+
+```css
+/* css */
+.red-item {
+  color: red;
+}
+.blue-item {
+  color: blue;
+}
+```
+
+在浏览器中的预览效果：
+
+<html-custom-class-demo></html-custom-class-demo>
+
 ## 语法及参数
 
 ### 语法

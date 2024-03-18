@@ -133,6 +133,70 @@ The preview of the above code in the browser is as follows:
 
 <html-style-demo></html-style-demo>
 
+### Custom Classes of Designated Words
+
+You can apply individual styles to specific characters through the `customClassMap` parameter. For example, in the following example, the "汉" part is in red, and the "音" part is in blue.
+
+```js
+import { html } from 'pinyin-pro';
+
+const htmlString = html('汉语拼音', {
+  customClassMap: {
+    'red-item': ['汉'],
+    'blue-item': ['音'],
+  },
+});
+
+/*
+<span class="py-result-item red-item">
+	<ruby>
+		<span class="py-chinese-item">汉</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">hàn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item">
+	<ruby>
+		<span class="py-chinese-item">语</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">yǔ</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item">
+	<ruby>
+		<span class="py-chinese-item">拼</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">pīn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+<span class="py-result-item blue-item">
+	<ruby>
+		<span class="py-chinese-item">音</span>
+		<rp>(</rp>
+		<rt class="py-pinyin-item">yīn</rt>
+		<rp>)</rp>
+	</ruby>
+</span>
+*/
+```
+
+```css
+/* css */
+.red-item {
+  color: red;
+}
+.blue-item {
+  color: blue;
+}
+```
+
+The preview of the above code in the browser is as follows:
+
+<html-custom-class-demo></html-custom-class-demo>
+
 ## API
 
 ### Function

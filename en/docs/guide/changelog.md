@@ -1,5 +1,21 @@
 # ChangeLog
 
+## 3.20.0
+
+- 【feat】 Added intelligent recognition for tone changes in `一` and `不`, which can be controlled by the `toneSandhi` parameter, refer to: [Wiki](https://zh.wiktionary.org/wiki/Appendix:%E2%80%9C%E4%B8%80%E2%80%9D%E5%8F%8A%E2%80%9C%E4%B8%8D%E2%80%9D%E7%9A%84%E5%8F%98%E8%B0%83)
+- 【feat】 Added intelligent recognition of pronunciation when `行`, `斗`, `重` are followed by numerals
+- 【feat】 Added intelligent recognition of pronunciation when `了` is at the beginning
+- 【feat】 Added `customClassMap` option to HTML API for adding custom class names to specified characters
+- 【patch】 Corrected the pinyin for some words
+
+## 3.19.6
+
+- 【patch】 Updated some word libraries, see details: [2c2f57ad](https://github.com/zh-lx/pinyin-pro/commit/2c2f57ad039bf80de93e1156edaaa030a1d370a6), [cd8bdba5](https://github.com/zh-lx/pinyin-pro/commit/cd8bdba5e6d918e68facec835be396e2c4608d61), [e7a46dda](https://github.com/zh-lx/pinyin-pro/commit/e7a46dda4135da8b373aa72154c373951266e959)
+
+## 3.19.5
+
+- 【fix】 Fixed the issue where the first letter was not retrieved correctly in the `pattern: 'first'` mode for non-Chinese characters
+
 ## 3.19.4
 
 - 【fix】Fixed the issue of incorrect conversion of non-Chinese characters under the `toneType: none` parameter. [#156](https://github.com/zh-lx/pinyin-pro/issues/156)
