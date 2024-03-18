@@ -24,12 +24,12 @@
     </tr>
     <tr>
         <td rowspan="2" colspan="2">准确率</td>
-        <td>😕 Node 版: 97.844%</td>
-        <td rowspan="2">😕 97.433%</td>
-        <td rowspan="2">🤩 99.744%</td>
+        <td>😕 Node 版: 95.277%</td>
+        <td rowspan="2">😕 95.123%</td>
+        <td rowspan="2">🤩 99.846%</td>
     </tr>
     <tr>
-        <td>😕 Web 版: 94.507%	</td>
+        <td>😕 Web 版: 92.197%	</td>
     </tr>
     <tr>
         <td rowspan="3">性能</td>
@@ -40,7 +40,7 @@
     </tr>
     <tr>
         <td>1w字转换耗时</td>
-        <td>🐢 795.904s</td>
+        <td>🐢 795.904ms</td>
         <td>🚲 206.5ms</td>
         <td>🚀 15.260ms</td>
     </tr>
@@ -51,7 +51,7 @@
         <td>🚀 607.131ms</td>
     </tr>
     <tr>
-        <td rowspan="3">兼容性</td>
+        <td rowspan="2">兼容性</td>
         <td>Web 环境</td>
         <td>✔️ 支持</td>
         <td>❌ 不支持</td>
