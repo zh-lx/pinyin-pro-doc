@@ -68,6 +68,7 @@ export default defineConfig({
           { text: 'customPinyin: 自定义拼音', link: '/use/customPinyin.md' },
           { text: 'html: HTML字符串', link: '/use/html.md' },
           { text: 'polyphonic: 全部读音', link: '/use/polyphonic.md' },
+          { text: 'addDict: 提高准确率', link: '/use/addDict.md' },
         ],
       },
       {

@@ -24,12 +24,12 @@ Among similar products, `pinyin-pro` has achieved a leading position in terms of
     </tr>
     <tr>
         <td rowspan="2" colspan="2">Accuracy</td>
-        <td>😕 On Node: 95.277%</td>
-        <td rowspan="2">😕 95.123%</td>
+        <td>😕 Node 版: 94.097%</td>
+        <td rowspan="2">😕 94.097%</td>
         <td rowspan="2">🤩 99.846%</td>
     </tr>
     <tr>
-        <td>😕 On Browser: 92.197%	</td>
+        <td>😕 Web 版: 91.170%	</td>
     </tr>
     <tr>
         <td rowspan="3">Performance</td>

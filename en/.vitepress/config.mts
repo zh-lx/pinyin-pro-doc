@@ -70,6 +70,7 @@ export default defineConfig({
           { text: 'customPinyin', link: '/use/customPinyin.md' },
           { text: 'html', link: '/use/html.md' },
           { text: 'polyphonic', link: '/use/polyphonic.md' },
+          { text: 'addDict', link: '/use/addDict.md' },
         ],
       },
       {

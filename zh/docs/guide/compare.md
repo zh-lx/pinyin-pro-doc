@@ -24,12 +24,12 @@
     </tr>
     <tr>
         <td rowspan="2" colspan="2">准确率</td>
-        <td>😕 Node 版: 95.277%</td>
-        <td rowspan="2">😕 95.123%</td>
+        <td>😕 Node 版: 94.097%</td>
+        <td rowspan="2">😕 94.097%</td>
         <td rowspan="2">🤩 99.846%</td>
     </tr>
     <tr>
-        <td>😕 Web 版: 92.197%	</td>
+        <td>😕 Web 版: 91.170%	</td>
     </tr>
     <tr>
         <td rowspan="3">性能</td>
@@ -48,7 +48,7 @@
         <td>100w字转换耗时</td>
         <td>⛔ 内存溢出转换失败</td>
         <td>🚀 638.888ms</td>
-        <td>🚀 607.131ms</td>
+        <td>🚀 820.131ms</td>
     </tr>
     <tr>
         <td rowspan="2">兼容性</td>

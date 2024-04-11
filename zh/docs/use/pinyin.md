@@ -126,6 +126,8 @@ const result = pinyin('汉语拼音', { type: 'all' });
     finalTail: 'n',
     num: 4,
     isZh: true,
+    polyphonic: ['hàn'],
+    inZhRange: 'true',
   },
   {
     origin: '语',
@@ -138,6 +140,8 @@ const result = pinyin('汉语拼音', { type: 'all' });
     finalTail: '',
     num: 3,
     isZh: true,
+    polyphonic: ['yǔ', 'yù'],
+    inZhRange: 'true',
   },
   {
     origin: '拼',
@@ -150,6 +154,8 @@ const result = pinyin('汉语拼音', { type: 'all' });
     finalTail: 'n',
     num: 1,
     isZh: true,
+    polyphonic: ['pīn'],
+    inZhRange: 'true',
   },
   {
     origin: '音',
@@ -162,6 +168,8 @@ const result = pinyin('汉语拼音', { type: 'all' });
     finalTail: 'n',
     num: 1,
     isZh: true,
+    polyphonic: ['yīn'],
+    inZhRange: 'true',
   },
 ];
  */
@@ -271,6 +279,8 @@ interface AllData {
     finalBody: string;
     finalTail: string;
     isZh: boolean;
+    polyphonic: string[]; // v3.20.0+
+    inZhRange: boolean; // v3.20.0+
 }
 
  // 返回转换后的信息

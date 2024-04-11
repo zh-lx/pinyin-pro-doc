@@ -177,9 +177,37 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
       {
         value: 'all',
         desc: '输出完整信息的对象数组',
-        example: `pinyin('拼音', { type: 'all' }); 
+        example: `pinyin('汉语拼音', { type: 'all' }); 
 /** result:
 [
+  {
+    origin: '汉',
+    pinyin: 'hàn',
+    initial: 'h',
+    final: 'àn',
+    first: 'h',
+    finalHead: '',
+    finalBody: 'à',
+    finalTail: 'n',
+    num: 4,
+    isZh: true,
+    polyphonic: ['hàn'],
+    inZhRange: 'true',
+  },
+  {
+    origin: '语',
+    pinyin: 'yǔ',
+    initial: 'y',
+    final: 'ǔ',
+    first: 'y',
+    finalHead: '',
+    finalBody: 'ǔ',
+    finalTail: '',
+    num: 3,
+    isZh: true,
+    polyphonic: ['yǔ', 'yù'],
+    inZhRange: 'true',
+  },
   {
     origin: '拼',
     pinyin: 'pīn',
@@ -191,6 +219,8 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     finalTail: 'n',
     num: 1,
     isZh: true,
+    polyphonic: ['pīn'],
+    inZhRange: 'true',
   },
   {
     origin: '音',
@@ -203,8 +233,10 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     finalTail: 'n',
     num: 1,
     isZh: true,
+    polyphonic: ['yīn'],
+    inZhRange: 'true',
   },
-]
+];
 */`,
       },
     ],

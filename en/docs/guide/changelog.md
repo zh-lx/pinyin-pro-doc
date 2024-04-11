@@ -2,11 +2,17 @@
 
 ## 3.20.0
 
-- 【feat】 Added intelligent recognition for tone changes in `一` and `不`, which can be controlled by the `toneSandhi` parameter, refer to: [Wiki](https://zh.wiktionary.org/wiki/Appendix:%E2%80%9C%E4%B8%80%E2%80%9D%E5%8F%8A%E2%80%9C%E4%B8%8D%E2%80%9D%E7%9A%84%E5%8F%98%E8%B0%83)
-- 【feat】 Added intelligent recognition of pronunciation when `行`, `斗`, `重` are followed by numerals
-- 【feat】 Added intelligent recognition of pronunciation when `了` is at the beginning
-- 【feat】 Added `customClassMap` option to HTML API for adding custom class names to specified characters
-- 【patch】 Corrected the pinyin for some words
+- 【feat】Support for customizing dictionaries through the `addDict` API.
+- 【feat】Added intelligent recognition of tone changes for `一` and `不`, which can be controlled by the `toneSandhi` parameter to toggle on and off. Reference: [Wikipedia](https://zh.wiktionary.org/wiki/Appendix:%E2%80%9C%E4%B8%80%E2%80%9D%E5%8F%8A%E2%80%9C%E4%B8%8D%E2%80%9D%E7%9A%84%E5%8F%98%E8%B0%83)
+- 【feat】Enhanced pronunciation recognition for `行`, `斗`, and `重` when preceded by numerical quantifiers.
+- 【feat】Added intelligent recognition of the pronunciation of `了` at the beginning of words.
+- 【feat】HTML API now includes the `customClassMap` option to add custom class names to specified characters.
+- 【feat】Implemented a new word segmentation algorithm, supporting dictionary input for more accurate segmentation.
+- 【feat】Added `polyphonic` and `inZhRange` properties to the `all` mode.
+- 【fix】Improved efficiency issue when using the `customPinyin` API.
+- 【fix】Resolved issues when using `multiple` and `surname` modes simultaneously.
+- 【fix】Addressed the problem in `multiple` mode where a non-Chinese character was lost when only one was present.
+- 【patch】Corrected the pronunciation of certain words.
 
 ## 3.19.6
 
