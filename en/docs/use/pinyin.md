@@ -250,6 +250,29 @@ pinyin('吕布', { v: true }); // lǚ bù
 pinyin('吕布', { type: 'num', v: true }); // lv3 bu4
 ```
 
+### Segmentation Algorithms <Badge type="tip" text="v3.20.0+" vertical="middle" />
+
+Set `options.segmentit` to choose different segmentation algorithms. The default is the maximum probability algorithm:
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+
+// Reverse Maximum Matching Algorithm: Fastest Speed
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 1,
+});
+
+// Maximum Probability Algorithm: Most Accurate Recognition
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 2,
+});
+
+// Minimum Segmentation Algorithm
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 3,
+});
+```
+
 ## API
 
 ### Function
@@ -266,6 +289,13 @@ interface BasicOptions {
     removeNonZh?: boolean;
     nonZh?: 'spaced' | 'consecutive' | 'removed';
     v?: boolean;
+    segmentit?: TokenizationAlgorithm; // v3.20.0+
+}
+
+enum TokenizationAlgorithm {
+  ReverseMaxMatch = 1,
+  MaxProbability = 2,
+  MinTokenization = 3,
 }
 
 interface AllData {

@@ -250,6 +250,29 @@ pinyin('吕布', { v: true }); // lǚ bù
 pinyin('吕布', { type: 'num', v: true }); // lv3 bu4
 ```
 
+### 选择不同的分词算法 <Badge type="tip" text="v3.20.0+" vertical="middle" />
+
+设置 `options.segmentit` 以选择不同的分词算法，默认为最大概率算法：
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+
+// 逆向最大匹配算法：速度最快
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 1,
+});
+
+// 最大概率算法：识别最准确
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 2,
+});
+
+// 最少分词数算法
+pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
+  segmentit: 3,
+});
+```
+
 ## 语法及参数
 
 ### 语法
@@ -266,6 +289,13 @@ interface BasicOptions {
     removeNonZh?: boolean;
     nonZh?: 'spaced' | 'consecutive' | 'removed';
     v?: boolean;
+    segmentit?: TokenizationAlgorithm; // v3.20.0+
+}
+
+enum TokenizationAlgorithm {
+  ReverseMaxMatch = 1,
+  MaxProbability = 2,
+  MinTokenization = 3,
 }
 
 interface AllData {
