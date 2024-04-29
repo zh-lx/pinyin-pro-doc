@@ -11,7 +11,7 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    logo: '/images/pinyin-logo.png',
+    logo: '/images/logo-circle.svg',
     footer: {
       message:
         '<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备20023182号-2</a>',

@@ -7,7 +7,7 @@ hero:
   text: 专业的拼音转换工具
   tagline: 一个识别准确、性能优异的汉字拼音转换库
   image:
-    src: /images/pinyin-logo.png
+    src: /images/logo-circle.svg
     alt: pinyin-pro
   actions:
     - theme: brand

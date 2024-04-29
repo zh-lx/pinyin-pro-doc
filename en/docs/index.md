@@ -7,7 +7,7 @@ hero:
   text: Professional in pinyin
   tagline: A Chinese pinyin conversion library with accurate recognition and excellent performance
   image:
-    src: /images/pinyin-logo.png
+    src: /images/logo-circle.svg
     alt: pinyin-pro
   actions:
     - theme: brand
