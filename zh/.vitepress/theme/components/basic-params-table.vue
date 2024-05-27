@@ -11,9 +11,12 @@
           <th width="70">默认值</th>
         </tr>
         <tr v-for="(row, index) in data" :key="index">
-          <td width="80" :rowspan="row.rowspan" v-if="row.rowspan">
-            {{ row.name }}
-          </td>
+          <td
+            width="80"
+            :rowspan="row.rowspan"
+            v-if="row.rowspan"
+            v-html="row.name"
+          ></td>
           <td width="70" :rowspan="row.rowspan" v-if="row.rowspan">
             {{ row.type }}
           </td>
@@ -273,7 +276,7 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     ],
   },
   {
-    option: 'mode',
+    option: 'mode <code>deprecated, 使用 surname 代替</code>',
     type: 'string',
     description: '拼音优先匹配的库模式',
     default: 'normal',
@@ -347,6 +350,29 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
         value: 'false',
         desc: '不应用',
         example: `pinyin('一旦被发现', { toneSandhi: false }); // 'yī dàn bèi fā xiàn'`,
+      },
+    ],
+  },
+  {
+    option: 'surname <code>3.21.0+</code>',
+    type: 'string',
+    description: '是否启用姓氏模式',
+    default: 'off',
+    children: [
+      {
+        value: 'off',
+        desc: '不启用姓氏模式',
+        example: `pinyin('我叫曾乐乐'); // wǒ jiào céng lè lè`,
+      },
+      {
+        value: 'head',
+        desc: '识别字符串开头的姓氏',
+        example: `pinyin('我叫曾乐乐', { surname: 'head' }); // wǒ jiào zēng lè lè`,
+      },
+      {
+        value: 'all ',
+        desc: '识别字符串中全部的姓氏',
+        example: `pinyin('我叫曾乐乐', { surname: 'all' }); // wǒ jiào zēng yuè yuè`,
       },
     ],
   },

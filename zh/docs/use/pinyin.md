@@ -192,18 +192,21 @@ pinyin('好', { multiple: true, type: 'array' }); // ["hǎo", "hào"]
 pinyin('好学', { multiple: true }); // hào xué
 ```
 
-### 姓氏模式 <Badge type="tip" text="v3.4.0+" vertical="middle" />
+### 姓氏模式 <Badge type="tip" text="v3.21.0+" vertical="middle" />
 
-设置 `options.mode` 为 `surname` 可以开启姓氏模式，匹配到百家姓中的姓氏相关的字符将优先输出姓氏拼音。
+设置 `options.surname` 为 `head`(只识别字符串开头的姓氏字符) 或者 `all`(识别字符串全部的姓氏字符) 可以开启姓氏模式，匹配到百家姓中的姓氏相关的字符将优先输出姓氏拼音。
 
 ```javascript
 import { pinyin } from 'pinyin-pro';
 
 // 不开启姓氏模式
-pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
+pinyin('我叫曾乐乐'); // 'wǒ jiào céng lè lè'
 
-// 开启姓氏模式
-pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
+// 开启 head 姓氏模式
+pinyin('我叫曾乐乐', { surname: 'head' }); // 'wǒ jiào zēng lè lè'
+
+// 开启 all 姓氏模式（会将“乐”也识别为乐毅的yuè姓氏）
+pinyin('我叫曾乐乐', { surname: 'all' }); // 'wǒ jiào zēng yuè yuè'
 ```
 
 ### 自定义分隔符 <Badge type="tip" text="v3.16.0+" vertical="middle" />
@@ -285,11 +288,13 @@ interface BasicOptions {
     toneType?: 'symbol' | 'num' | 'none';
     pattern?: 'pinyin' | 'initial' | 'final' | 'num' | 'first' | 'finalHead' | 'finalBody' | 'finalTail';
     multiple?: boolean;
-    mode?: 'normal' | 'surname';
     removeNonZh?: boolean;
     nonZh?: 'spaced' | 'consecutive' | 'removed';
     v?: boolean;
     segmentit?: TokenizationAlgorithm; // v3.20.0+
+    surname?: 'off' | 'head' | 'all'; // v3.21.0+
+    mode?: 'normal' | 'surname'; // 已废弃，使用 surname 替代
+    toneSandhi?: boolean;
 }
 
 enum TokenizationAlgorithm {

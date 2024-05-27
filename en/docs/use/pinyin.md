@@ -192,18 +192,21 @@ pinyin('好', { multiple: true, type: 'array' }); // ["hǎo", "hào"]
 pinyin('好学', { multiple: true }); // hào xué
 ```
 
-### Surname Mode <Badge type="tip" text="v3.4.0+" vertical="middle" />
+### Surname Mode <Badge type="tip" text="v3.21.0+" vertical="middle" />
 
-When `options.mode` is `surname`, the surname mode will be enabled. In this mode, when matching Chinese characters related to surnames, priority will be given to outputting surname pinyin.
+Set `options.surname` to `head` (to recognize surname characters only at the beginning of the string) or `all` (to recognize all surname characters in the string) to enable surname mode. When enabled, characters that match surnames from the "Hundred Family Surnames" will prioritize outputting the surname pinyin.
 
 ```javascript
 import { pinyin } from 'pinyin-pro';
 
-// With surname mode disabled
-pinyin('我叫曾小贤'); // 'wǒ jiào céng xiǎo xián'
+// Surname mode not enabled
+pinyin('我叫曾乐乐'); // 'wǒ jiào céng lè lè'
 
-// With surname mode enabled
-pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'
+// Enable head surname mode
+pinyin('我叫曾乐乐', { surname: 'head' }); // 'wǒ jiào zēng lè lè'
+
+// Enable all surname mode (will recognize “乐” as the surname yuè of 乐毅)
+pinyin('我叫曾乐乐', { surname: 'all' }); // 'wǒ jiào zēng yuè yuè'
 ```
 
 ### Customize Separator <Badge type="tip" text="v3.16.0+" vertical="middle" />
@@ -285,11 +288,13 @@ interface BasicOptions {
     toneType?: 'symbol' | 'num' | 'none';
     pattern?: 'pinyin' | 'initial' | 'final' | 'num' | 'first' | 'finalHead' | 'finalBody' | 'finalTail';
     multiple?: boolean;
-    mode?: 'normal' | 'surname';
     removeNonZh?: boolean;
     nonZh?: 'spaced' | 'consecutive' | 'removed';
     v?: boolean;
     segmentit?: TokenizationAlgorithm; // v3.20.0+
+    surname?: 'off' | 'head' | 'all'; // v3.21.0+
+    mode?: 'normal' | 'surname'; // deprecated, use surname to replace
+    toneSandhi?: boolean;
 }
 
 enum TokenizationAlgorithm {

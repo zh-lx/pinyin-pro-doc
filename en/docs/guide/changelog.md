@@ -1,5 +1,13 @@
 # ChangeLog
 
+## 3.21.0
+
+- 【feat】Added a `surname` option to the `pinyin` API, which supports recognizing surnames at the beginning of strings.
+
+## 3.20.4
+
+- 【fix】Fixed TypeScript type errors caused by alias.
+
 ## 3.20.3
 
 - 【fix】Fixed an issue where the `convert` API incorrectly handled tone conversion for the `iu` finals.
