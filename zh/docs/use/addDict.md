@@ -1,8 +1,6 @@
 # addDict <Badge type="tip" text="v3.20.0+" vertical="middle" />
 
-`pinyin-pro` 内置了一些高频常用词的词典，想要保证高准确率，需要应用更完备的词典，可以通过 `addDict` 添加词典。
-
-官方提供了两个词典包：[现代汉语词典](https://github.com/chinese-data/pinyin-pro-data/blob/main/packages/pinyin-pro-data/modern.json)、[完备词典](https://github.com/chinese-data/pinyin-pro-data/blob/main/packages/pinyin-pro-data/complete.json)
+`pinyin-pro` 内置了一些高频常用词的词典，想要保证高准确率，需要应用更完备的词典，可以通过 `addDict` 添加词典。详见 [@pinyin-pro/data](https://github.com/chinese-data/pinyin-pro-data)
 
 通过 `npm install @pinyin-pro/data` 进行安装。
 

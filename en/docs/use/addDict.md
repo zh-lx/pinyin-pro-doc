@@ -1,8 +1,6 @@
 # addDict <Badge type="tip" text="v3.20.0+" vertical="middle" />
 
-`pinyin-pro` has built-in dictionaries for some commonly used high-frequency words. To ensure high accuracy, you may need to apply more comprehensive dictionaries using the `addDict` function.
-
-Two dictionary packages are provided by the official: [Modern Chinese Dictionary](https://github.com/chinese-data/pinyin-pro-data/blob/main/packages/pinyin-pro-data/modern.json) and [Complete Dictionary](https://github.com/chinese-data/pinyin-pro-data/blob/main/packages/pinyin-pro-data/complete.json).
+`pinyin-pro` has built-in dictionaries for some commonly used high-frequency words. To ensure high accuracy, you may need to apply more comprehensive dictionaries using the `addDict` function. For more detail by [@pinyin-pro/data](https://github.com/chinese-data/pinyin-pro-data)
 
 Install via `npm install @pinyin-pro/data`.
 

@@ -1,5 +1,17 @@
 # ChangeLog
 
+# 3.22.0
+
+- 【feat】Comprehensive adaptation of all APIs to support double Unicode encoded Chinese characters [#242](https://github.com/zh-lx/pinyin-pro/pull/242), [#243](https://github.com/zh-lx/pinyin-pro/pull/243), [#247](https://github.com/zh-lx/pinyin-pro/pull/247)
+- 【feat】Support for all characters in the [General Standard Chinese Character Table](https://zh.wiktionary.org/wiki/Appendix:%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3%E7%B4%A2%E5%BC%95/%E9%80%9A%E7%94%A8%E8%A7%84%E8%8C%83%E6%B1%89%E5%AD%97%E8%A1%A8) [#244](https://github.com/zh-lx/pinyin-pro/pull/244)
+- 【feat】Support for the pronunciation of the repeated character 々 [#245](https://github.com/zh-lx/pinyin-pro/pull/245)
+- 【feat】Support for pinyin characters like `êê̄ếê̌ề` [#248](https://github.com/zh-lx/pinyin-pro/pull/248)
+- 【patch】Correct the default pronunciation of `曲`: [#249](https://github.com/zh-lx/pinyin-pro/pull/249)
+
+## 3.21.1
+
+- 【fix】Fixed the issue where `surname: 'head'` did not work for compound surnames
+
 ## 3.21.0
 
 - 【feat】Added a `surname` option to the `pinyin` API, which supports recognizing surnames at the beginning of strings.
