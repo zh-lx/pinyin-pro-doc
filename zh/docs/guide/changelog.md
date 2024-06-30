@@ -1,5 +1,18 @@
 # 更新日志
 
+# 3.23.0
+
+- 【feat】支持外部调用 `getInitialAndFinal`、`getFinalParts`、`getNumOfTone` 等 API [#255](https://github.com/zh-lx/pinyin-pro/pull/255)
+
+# 3.22.2
+
+- 【fix】修复 alias 导致的 `.d.ts` 文件报错 [#253](https://github.com/zh-lx/pinyin-pro/pull/253)
+
+# 3.22.1
+
+- 【patch】校正部分词库 [#252](https://github.com/zh-lx/pinyin-pro/pull/252)
+- 【perf】小幅优化性能 [#251](https://github.com/zh-lx/pinyin-pro/pull/251)
+
 ## 3.22.0
 
 - 【feat】各 api 全面适配双 unicode 编码中文字符 [#242](https://github.com/zh-lx/pinyin-pro/pull/242)、[#243](https://github.com/zh-lx/pinyin-pro/pull/243)、[#247](https://github.com/zh-lx/pinyin-pro/pull/247)

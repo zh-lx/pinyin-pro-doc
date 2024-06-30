@@ -69,6 +69,7 @@ export default defineConfig({
           { text: 'html: HTML字符串', link: '/use/html.md' },
           { text: 'polyphonic: 全部读音', link: '/use/polyphonic.md' },
           { text: 'addDict: 提高准确率', link: '/use/addDict.md' },
+          { text: 'others: 其他 API', link: '/use/others.md' },
         ],
       },
       {

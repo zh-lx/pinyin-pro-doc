@@ -71,6 +71,7 @@ export default defineConfig({
           { text: 'html', link: '/use/html.md' },
           { text: 'polyphonic', link: '/use/polyphonic.md' },
           { text: 'addDict', link: '/use/addDict.md' },
+          { text: 'others', link: '/use/others.md' },
         ],
       },
       {

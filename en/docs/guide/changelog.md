@@ -1,5 +1,18 @@
 # ChangeLog
 
+# 3.23.0
+
+- 【feat】Support for external calls to `getInitialAndFinal`, `getFinalParts`, `getNumOfTone`, and other APIs [#255](https://github.com/zh-lx/pinyin-pro/pull/255)
+
+# 3.22.2
+
+- 【fix】Fixed `.d.ts` file errors caused by alias [#253](https://github.com/zh-lx/pinyin-pro/pull/253)
+
+# 3.22.1
+
+- 【patch】Corrected some entries in the word library [#252](https://github.com/zh-lx/pinyin-pro/pull/252)
+- 【perf】Slight performance optimization [#251](https://github.com/zh-lx/pinyin-pro/pull/251)
+
 ## 3.22.0
 
 - 【feat】Comprehensive adaptation of all APIs to support double Unicode encoded Chinese characters [#242](https://github.com/zh-lx/pinyin-pro/pull/242), [#243](https://github.com/zh-lx/pinyin-pro/pull/243), [#247](https://github.com/zh-lx/pinyin-pro/pull/247)
