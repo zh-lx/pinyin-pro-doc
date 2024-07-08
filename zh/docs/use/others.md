@@ -35,7 +35,7 @@ const result = getFinalParts('guang');
 */
 ```
 
-### getFinalParts
+### getNumOfTone
 
 可以使用 `getNumOfTone` 获取指定拼音的声调对应的数字:
 
