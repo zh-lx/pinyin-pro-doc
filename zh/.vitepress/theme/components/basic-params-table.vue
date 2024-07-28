@@ -286,11 +286,6 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
         desc: '常规模式',
         example: `pinyin('我叫曾小贤', { mode: 'normal' }); // 'wǒ jiào céng xiǎo xián'`,
       },
-      {
-        value: 'surname',
-        desc: '姓氏模式(优先匹配姓氏字库)',
-        example: `pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'`,
-      },
     ],
   },
   {
@@ -313,6 +308,19 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
         value: 'removed ',
         desc: '非汉字在结果中移除',
         example: `pinyin('我very喜欢你', { nonZh: 'removed' }); // 'wǒ xǐ huān nǐ'`,
+      },
+    ],
+  },
+  {
+    option: 'nonZhScope',
+    type: 'RegExp',
+    description: '指定 nonZh 范围的正则表达式',
+    default: 'null',
+    children: [
+      {
+        value: '/[a-zA-Z]/',
+        desc: '只将英文字符紧凑输出',
+        example: `pinyin('我very喜欢你，真的', { nonZh: 'consecutive', nonZhScope: /[a-zA-Z]/ }); // 'wǒ very xǐ huan nǐ ， zhēn de'`,
       },
     ],
   },

@@ -63,6 +63,7 @@ export default defineConfig({
         text: 'API及示例',
         items: [
           { text: 'pinyin: 拼音转换', link: '/use/pinyin.md' },
+          { text: 'segment: 分词', link: '/use/segment.md' },
           { text: 'match: 拼音汉字匹配', link: '/use/match.md' },
           { text: 'convert: 格式转换', link: '/use/convert.md' },
           { text: 'customPinyin: 自定义拼音', link: '/use/customPinyin.md' },

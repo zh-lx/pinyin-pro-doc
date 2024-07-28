@@ -1,5 +1,14 @@
 # ChangeLog
 
+# 3.24.0
+
+- 【feat】Added `segment` API for word segmentation [#265](https://github.com/zh-lx/pinyin-pro/pull/265)
+- 【feat】Added `nonZhScope` property to the `pinyin` API to specify the scope of `nonZh` [#266](https://github.com/zh-lx/pinyin-pro/pull/266)
+
+# 3.23.1
+
+- **patch**: Corrected some pronunciations [#260](https://github.com/zh-lx/pinyin-pro/pull/260)
+
 # 3.23.0
 
 - 【feat】Support for external calls to `getInitialAndFinal`, `getFinalParts`, `getNumOfTone`, and other APIs [#255](https://github.com/zh-lx/pinyin-pro/pull/255)

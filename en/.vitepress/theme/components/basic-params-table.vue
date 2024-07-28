@@ -314,6 +314,19 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     ],
   },
   {
+    option: 'nonZhScope',
+    type: 'RegExp',
+    description: '指定 nonZh 范围的正则表达式',
+    default: 'null',
+    children: [
+      {
+        value: '/[a-zA-Z]/',
+        desc: '只将英文字符紧凑输出',
+        example: `pinyin('我very喜欢你，真的', { nonZh: 'consecutive', nonZhScope: /[a-zA-Z]/ }); // 'wǒ very xǐ huan nǐ ， zhēn de'`,
+      },
+    ],
+  },
+  {
     option: 'v',
     type: 'boolean',
     description: '是否将结果中的 ü 替换为 v(带音调的 ǖ,ǘ,ǚ,ǜ 不会被转换)',

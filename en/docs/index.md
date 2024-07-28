@@ -19,7 +19,7 @@ hero:
 
 features:
   - title: 🎨 Rich Functionality
-    details: Rich and diverse functions, including but not limited to Chinese Pinyin conversion, Chinese Pinyin matching, and Chinese Pinyin HTML strings
+    details: Rich and diverse functions, including but not limited to Chinese Pinyin conversion, Segment, Chinese Pinyin matching, and Chinese Pinyin HTML strings
   - title: 🚀 Excellent Performance
     details: By applying algorithms such as AC automata, greedy algorithm, and hash function optimization, the performance is greatly excellent
   - title: 🔍 Accurate Recognition

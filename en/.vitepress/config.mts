@@ -65,6 +65,7 @@ export default defineConfig({
         text: 'API and Example',
         items: [
           { text: 'pinyin', link: '/use/pinyin.md' },
+          { text: 'segment', link: '/use/segment.md' },
           { text: 'match', link: '/use/match.md' },
           { text: 'convert', link: '/use/convert.md' },
           { text: 'customPinyin', link: '/use/customPinyin.md' },

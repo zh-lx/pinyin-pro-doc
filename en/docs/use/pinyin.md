@@ -128,6 +128,7 @@ const result = pinyin('汉语拼音', { type: 'all' });
     isZh: true,
     polyphonic: ['hàn'],
     inZhRange: 'true',
+    result: 'hàn',
   },
   {
     origin: '语',
@@ -142,6 +143,7 @@ const result = pinyin('汉语拼音', { type: 'all' });
     isZh: true,
     polyphonic: ['yǔ', 'yù'],
     inZhRange: 'true',
+    result: 'yǔ',
   },
   {
     origin: '拼',
@@ -156,6 +158,7 @@ const result = pinyin('汉语拼音', { type: 'all' });
     isZh: true,
     polyphonic: ['pīn'],
     inZhRange: 'true',
+    result: 'pīn',
   },
   {
     origin: '音',
@@ -170,6 +173,7 @@ const result = pinyin('汉语拼音', { type: 'all' });
     isZh: true,
     polyphonic: ['yīn'],
     inZhRange: 'true',
+    result: 'yīn',
   },
 ];
  */
@@ -295,6 +299,7 @@ interface BasicOptions {
     surname?: 'off' | 'head' | 'all'; // v3.21.0+
     mode?: 'normal' | 'surname'; // deprecated, use surname to replace
     toneSandhi?: boolean;
+    nonZhScope?: RegExp; // 3.24.0+
 }
 
 enum TokenizationAlgorithm {
@@ -316,6 +321,7 @@ interface AllData {
     isZh: boolean;
     polyphonic: string[]; // v3.20.0+
     inZhRange: boolean; // v3.20.0+
+    result: string; // v3.24.0+
 }
 
  // 返回转换后的信息
