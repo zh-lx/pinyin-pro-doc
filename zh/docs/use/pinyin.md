@@ -295,6 +295,7 @@ interface BasicOptions {
     surname?: 'off' | 'head' | 'all'; // v3.21.0+
     mode?: 'normal' | 'surname'; // 已废弃，使用 surname 替代
     toneSandhi?: boolean;
+    nonZhScope?: RegExp; // 3.24.0+
 }
 
 enum TokenizationAlgorithm {
@@ -316,6 +317,7 @@ interface AllData {
     isZh: boolean;
     polyphonic: string[]; // v3.20.0+
     inZhRange: boolean; // v3.20.0+
+    result: string; // v3.24.0+
 }
 
  // 返回转换后的信息
