@@ -9,24 +9,24 @@
 
 - 【fix】修复 `segment` 对于最后的标点符号丢弃的问题 [#268](https://github.com/zh-lx/pinyin-pro/pull/268)
 
-# 3.24.0
+## 3.24.0
 
 - 【feat】新增 `segment` API 用于分词 [#265](https://github.com/zh-lx/pinyin-pro/pull/265)
 - 【feat】`pinyin` API 新增 `nonZhScope` 属性用于指定 `nonZh` 的范围 [#266](https://github.com/zh-lx/pinyin-pro/pull/266)
 
-# 3.23.1
+## 3.23.1
 
 - 【patch】修正部分读音 [#260](https://github.com/zh-lx/pinyin-pro/pull/260)
 
-# 3.23.0
+## 3.23.0
 
 - 【feat】支持外部调用 `getInitialAndFinal`、`getFinalParts`、`getNumOfTone` 等 API [#255](https://github.com/zh-lx/pinyin-pro/pull/255)
 
-# 3.22.2
+## 3.22.2
 
 - 【fix】修复 alias 导致的 `.d.ts` 文件报错 [#253](https://github.com/zh-lx/pinyin-pro/pull/253)
 
-# 3.22.1
+## 3.22.1
 
 - 【patch】校正部分词库 [#252](https://github.com/zh-lx/pinyin-pro/pull/252)
 - 【perf】小幅优化性能 [#251](https://github.com/zh-lx/pinyin-pro/pull/251)

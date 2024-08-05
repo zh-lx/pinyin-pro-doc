@@ -9,24 +9,24 @@
 
 - 【fix】Fixed the issue where the `segment` function would discard the last punctuation mark [#268](https://github.com/zh-lx/pinyin-pro/pull/268)
 
-# 3.24.0
+## 3.24.0
 
 - 【feat】Added `segment` API for word segmentation [#265](https://github.com/zh-lx/pinyin-pro/pull/265)
 - 【feat】Added `nonZhScope` property to the `pinyin` API to specify the scope of `nonZh` [#266](https://github.com/zh-lx/pinyin-pro/pull/266)
 
-# 3.23.1
+## 3.23.1
 
 - **patch**: Corrected some pronunciations [#260](https://github.com/zh-lx/pinyin-pro/pull/260)
 
-# 3.23.0
+## 3.23.0
 
 - 【feat】Support for external calls to `getInitialAndFinal`, `getFinalParts`, `getNumOfTone`, and other APIs [#255](https://github.com/zh-lx/pinyin-pro/pull/255)
 
-# 3.22.2
+## 3.22.2
 
 - 【fix】Fixed `.d.ts` file errors caused by alias [#253](https://github.com/zh-lx/pinyin-pro/pull/253)
 
-# 3.22.1
+## 3.22.1
 
 - 【patch】Corrected some entries in the word library [#252](https://github.com/zh-lx/pinyin-pro/pull/252)
 - 【perf】Slight performance optimization [#251](https://github.com/zh-lx/pinyin-pro/pull/251)
