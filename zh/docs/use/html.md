@@ -211,7 +211,7 @@ interface HtmlOptions {
   wrapNonChinese?: boolean;
   nonChineseClass?: string;
   tone?: boolean;
-  rp?: boolean; // v3.25.0+  是否输出 <rp>(</rp> 和 <rp>)</rp> 标签
+  rp?: boolean; // v3.24.2+  是否输出 <rp>(</rp> 和 <rp>)</rp> 标签
 }
 
 function html(text: string, options?: HtmlOptions): string {}

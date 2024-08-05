@@ -1,6 +1,6 @@
 # ChangeLog
 
-## 3.25.0
+## 3.24.2
 
 - 【feat】Added `rp` option to the `html` API to remove `<rp>(</rp>` and `<rp>)</rp>` from the output [#272](https://github.com/zh-lx/pinyin-pro/pull/272)
 - 【feat】When the custom class name in the `html` API is set to `false` or `null`, the default class name is retained [#271](https://github.com/zh-lx/pinyin-pro/pull/271)
