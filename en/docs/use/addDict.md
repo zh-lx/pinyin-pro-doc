@@ -24,7 +24,7 @@ Includes `日本京都大学`, enabling accurate recognition (approximately 0.6M
 ```js
 import { pinyin, addDict } from 'pinyin-pro';
 // Import after installing via `npm install @pinyin-pro/data`
-import ModernChineseDict from '@pinyin-pro/data/modern.json';
+import ModernChineseDict from '@pinyin-pro/data/modern';
 
 addDict(ModernChineseDict);
 
@@ -39,7 +39,7 @@ Includes more words for higher recognition accuracy (approximately 3.99MB after 
 ```js
 import { pinyin, addDict } from 'pinyin-pro';
 // Import after installing via `npm install @pinyin-pro/data`
-import CompleteDict from '@pinyin-pro/data/complete.json';
+import CompleteDict from '@pinyin-pro/data/complete';
 
 addDict(CompleteDict);
 

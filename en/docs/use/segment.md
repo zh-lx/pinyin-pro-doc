@@ -2,12 +2,19 @@
 
 The `pinyin-pro` library exports a `segment` function for word segmentation output.
 
+::: tip
+To ensure the accuracy of word segmentation, it is necessary to first add a comprehensive dictionary, such as `@pinyin-pro/data/complete` or `@pinyin-pro/data/modern`, using the `addDict` API before utilizing the `segment` API.
+:::
+
 ## Example
 
 ### Basic Usage
 
 ```js
-import { segment } from 'pinyin-pro';
+import { segment, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造');
 
@@ -35,7 +42,10 @@ Specify different output formats using the `format` parameter.
 #### AllSegment
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.AllSegment,
@@ -61,7 +71,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### AllArray
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.AllArray,
@@ -113,7 +126,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### AllString
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.AllString,
@@ -129,7 +145,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### PinyinSegment
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.PinyinSegment,
@@ -155,7 +174,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### PinyinArray
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.PinyinArray,
@@ -181,7 +203,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### PinyinString
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.PinyinString,
@@ -194,7 +219,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### ZhSegment
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.ZhSegment,
@@ -220,7 +248,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### ZhArray
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.ZhArray,
@@ -246,7 +277,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 #### ZhString
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.ZhString,
@@ -261,7 +295,10 @@ const result = segment('小明硕士毕业于中国科学院计算所，后在�
 Customize the separator using the `separator` parameter. This only applies to the `AllString`, `PinyinString`, and `ZhString` output formats.
 
 ```js
-import { segment, OutputFormat } from 'pinyin-pro';
+import { segment, OutputFormat, addDict } from 'pinyin-pro';
+import CompleteDict from '@pinyin-pro/data/complete';
+
+addDict(CompleteDict);
 
 const result = segment('小明硕士毕业于中国科学院计算所，后在日本京都大学深造', {
   format: OutputFormat.AllString,

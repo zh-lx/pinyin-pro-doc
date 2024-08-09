@@ -24,7 +24,7 @@ const result1 = pinyin('小明硕士毕业于中国科学院计算所，后在�
 ```js
 import { pinyin, addDict } from 'pinyin-pro';
 // 引入前需要先通过 `npm install @pinyin-pro/data` 进行安装
-import ModernChineseDict from '@pinyin-pro/data/modern.json';
+import ModernChineseDict from '@pinyin-pro/data/modern';
 
 addDict(ModernChineseDict);
 
@@ -39,7 +39,7 @@ const result = pinyin('小明硕士毕业于中国科学院计算所，后在日
 ```js
 import { pinyin, addDict } from 'pinyin-pro';
 // 引入前需要先通过 `npm install @pinyin-pro/data` 进行安装
-import CompleteDict from '@pinyin-pro/data/complete.json';
+import CompleteDict from '@pinyin-pro/data/complete';
 
 addDict(CompleteDict);
 

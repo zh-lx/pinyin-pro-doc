@@ -45,6 +45,14 @@ export default defineConfig({
             text: 'polyphonic',
             link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNqNUs1u1DAQfhXjS1ppk8ANbZNK1VIkTlSilUDyxY2HzSD/YXu3RKu8Cxe48QAceBt4DzzZUHalgipFivPN930z88U7jlbBp6pPRvMlb568eL26fnd1yQg4F7ahN9PSrlvBwQqeMcaaHqSaTvlsIEnW9TJESJl0c/2yfC44q4/qfUq+hI8b3GbK2/Lmolw542XCWw2Z3DmbwJL81WULak3YsYGVBnJ5i3DnXUhHmjtUqW8VbLGDcvpYMLSYUOoydlJD+6x6euiYMGk4XzkFV1oOEJp6j0y71ffLNbdODX80CrcMVe4mvc8xNHUGZsE9rYldQJ9YGjwNa5za0HqzBRqanBVVbSTaKsXibK/fqyjteoqdL/jMyL9kVu2Yd3rwvbPYsZG9D86wwqMd0JY+OLISNkcSEwsQNzq9SQHtmrUHupPi15cf9Hz7+vP75+I0a0jhNFTarU8OdVQ79rsIQQ7/s1vkGWnxJSskcQs2PtxhcnqggdaPtdf63+Zan57lAPexlUb66kN0Nge5o7DFXIiCL9mEEPY3R4IFp9sal3UN0VSxrw/LJBmFHfn4G5P7Jkc=',
           },
+          {
+            text: 'addDict',
+            link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNp1Uk9v0zAc/Soml2xSE8MNlXQCdUPixA6bBFIuXmwaI8cOsdtRVZUmcUKCAkLTYFSIjT9DohtwYhrrt2nS9bSvgJ1kayvgFOf93nv+vZd0LMoxeeyGKmJW1fKuLN+tr91fXQEGWPK5Z56AId6o+RbhvqUxALyQIJyf9DkiCoEgRIkkSpPW1247130LwLl5qFTskEdN2tKUe876LacuohgpusGIJgeCK8KN/M5KjeCGweYNOIqIHrco2YxFouY0mxSrsIZJiwbEyV8qgHKqKGKODBAjtWvu1VlHRRUjS3WBySpDbZJ4sEDybPAynLchcPtCg2kLUKxvQ3Gsa/CgBkrBJc2TQUJjBVQ7NstGAjdNvNKCRmZzYLswQpS7Sto3Cn2hMm3DvHarYpUM/UlKVQfElLcprwCE8TINFOiCB4mIgF3gTpwI41fSTbuMKJIzC97NKRFipBAMSo6R+by0XZhVLuYTXbRUICGyyRSolXss2OmPF9mb3nhvO/34Lfu+PTreHZ30RseH6bvh+OBVevhl8nb/7GhvfLSTPd06P32Wvuyl/a/ZzuesPxidDCZPhumnA03Lfv2cbH2wp3cJRlwmGgv22XCQPd8f/36dve+fn+7alXKJRV1QkdOJUOw+lILrojqmTL8cSN+qghwx2DS5gX3L/I2yCiGRkStDODuuXGj+W9c/Lf5iYyrVjMS4dn3etbp/AHmWTEg='
+          },
+          {
+            text: 'segment',
+            link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNp1Us1u00AYfJXFF6dSbMMNBacCpUXiRA+tBJIvW+9HvMjeNd5NShRFqsQJCQIIVYUSIVp+ikRa4ERVmreJnebUV2DXcZpEwMnr+WZmvxm7bVBG4LEdyCg0KoZ7ZeVubf3+2irSwLLHXP1EIWb1qmcA8wyFIeQGgEl+UucIJEZ+gBMBUpE21m9b1z0DOQvzQMrYgkcN2lSUe9bGLavGoxhLuhmCIvucSWBafme1CqSusUUDhiNQ4yaFrZgnckGzRYkMqgSa1AcrfykjyqikOLSEj0OoXrOvzjtKKkNYrnECayFuQeI6EyTP5lyGczc5aU01hDYRJeo2HMeqBtdRQCG4pLnCT2gskWzFetmIk4aOV1jQSG+OTNuJMGW2FOaNiX6i0m07ee1G2SgY6pMUqjYSUI9U3jLChKxQX6IOepDwCJkxZS3KrDjh2rDg63pDkJAzJ7ybM6JDsMSOX3C0zGOFbWleuZRPVNNCogREI5SoOl2kZKY/XmRvuqP9nfTjt+z7zvBkb3jaHZ4cpe8Go8NX6dGX8duD8+P90fFu9nT74uxZ+rKb9r5mu5+zXn942h8/GaSfDhUt+/VzvP3BnF3GQ7BDXi+Z54N+9vxg9Pt19r53cbZnlostllRFk6BWhGP7oeBMVdXWdXrFQHhGBeWIxmbRNewZ+n8UFccBEdkicObH5anmv3390+IvNqFCzkm0a8djHaPzB9enTQA='
+          },
         ],
       },
     ],
