@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.25.0
+
+- 【feat】Added `v` option to the `match` API to allow using `v` to match `ü` [#276](https://github.com/zh-lx/pinyin-pro/pull/276)
+
 ## 3.24.2
 
 - 【feat】Added `rp` option to the `html` API to remove `<rp>(</rp>` and `<rp>)</rp>` from the output [#272](https://github.com/zh-lx/pinyin-pro/pull/272)
