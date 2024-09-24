@@ -87,6 +87,16 @@ match('会计', 'kuaiji'); // [0, 1]
 match('会计', 'huiji'); // [0, 1]
 ```
 
+### 使用 `v` 匹配 `ü` <Badge type="tip" text="v3.25.0+" vertical="middle" />
+
+通过指定 `v` 选项来使用 `v` 来匹配 `ü`：
+
+```js
+import { match } from 'pinyin-pro';
+
+match('吕布', 'lvbu'); // [0, 1]
+```
+
 ## 语法及参数
 
 ### 语法
@@ -99,6 +109,7 @@ interface MatchOptions {
   continuous?: boolean;
   space?: 'ignore' | 'preserve';
   lastPrecision?: 'first' | 'start' | 'every' | 'any';
+  v?: boolean; // v3.25.0+
 }
 
 match(text, pinyin， options?: MatchOptions); // 匹配成功返回匹配汉字对应下标数组; 不成功返回 null
@@ -182,5 +193,17 @@ match(text, pinyin， options?: MatchOptions); // 匹配成功返回匹配汉字
     <tr>
         <td>any</td>
         <td>包含当前拼音的所有字符即为匹配成功</td>
+    </tr>
+    <tr>
+        <td rowspan="2">v</td>
+        <td rowspan="2">boolean</td>
+        <td rowspan="2">是否允许使用 <code>v</code> 匹配 <code>ü</code></td>
+        <td>true</td>
+        <td>允许使用 <code>v</code> 匹配 <code>ü</code></td>
+        <td rowspan="2">false</td>
+    </tr>
+    <tr>
+        <td>false</td>
+        <td>不允许使用 <code>v</code> 匹配 <code>ü</code></td>
     </tr>
 </table>

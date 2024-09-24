@@ -87,6 +87,16 @@ match('会计', 'kuaiji'); // [0, 1]
 match('会计', 'huiji'); // [0, 1]
 ```
 
+### v match ü <Badge type="tip" text="v3.25.0+" vertical="middle" />
+
+The `v` attribute can be used to allow using `v` to match `ü`:
+
+```js
+import { match } from 'pinyin-pro';
+
+match('吕布', 'lvbu'); // [0, 1]
+```
+
 ## API
 
 ### Function
@@ -99,6 +109,7 @@ interface MatchOptions {
   continuous?: boolean;
   space?: 'ignore' | 'preserve';
   lastPrecision?: 'first' | 'start' | 'every' | 'any';
+  v?: boolean; // v3.25.0+
 }
 
 function match(text: string, pinyin: string， options?: MatchOptions): number[] | null; // 匹配成功返回匹配汉字对应下标数组; 不成功返回 null
@@ -182,5 +193,17 @@ function match(text: string, pinyin: string， options?: MatchOptions): number[]
     <tr>
         <td>any</td>
         <td>containing all characters of the current pinyin are considered as successful matches</td>
+    </tr>
+    <tr>
+        <td rowspan="2">v</td>
+        <td rowspan="2">boolean</td>
+        <td rowspan="2">Whether to allow using <code>v</code> to match <code>ü</code></td>
+        <td>true</td>
+        <td>allow using <code>v</code> to match <code>ü</code></td>
+        <td rowspan="2">false</td>
+    </tr>
+    <tr>
+        <td>false</td>
+        <td>not allow using <code>v</code> to match <code>ü</code></td>
     </tr>
 </table>
