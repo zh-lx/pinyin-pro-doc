@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.26.0
+
+- 【feat】Fixed the inconsistency in return values of `first` in `pattern: 'first'` mode and `type: 'all'`: Modify it to consistently return the original non-Chinese characters for non-Chinese inputs. [#278](https://github.com/zh-lx/pinyin-pro/pull/278)
+
 ## 3.25.0
 
 - 【feat】Added `v` option to the `match` API to allow using `v` to match `ü` [#276](https://github.com/zh-lx/pinyin-pro/pull/276)
