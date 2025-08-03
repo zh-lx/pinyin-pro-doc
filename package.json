@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm --filter \"./en\" run docs:build && pnpm --filter \"./zh\" run docs:build && node ./scripts/zip"
+    "build": "pnpm --filter \"./en\" run docs:build && pnpm --filter \"./zh\" run docs:build && node ./scripts/zip",
+    "deploy:docs": "pnpm build && bash ./deploy.sh"
   },
   "keywords": [],
   "author": "",

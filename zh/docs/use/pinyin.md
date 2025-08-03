@@ -276,6 +276,21 @@ pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学
 });
 ```
 
+### 声母排除 y 和 w <Badge type="tip" text="v3.27.0+" vertical="middle" />
+
+根据 [wiki](https://zh.wikipedia.org/zh-cn/%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3#%E5%A3%B0%E6%AF%8D)，`y` 和 `w` 不属于声母，但为了便于理解，在 `pinyin-pro` 中，默认将 `y` 和 `w` 作为声母。设置 `options.initialPattern` 为 `standard` 时，可将声母排除 `y` 和 `w`。
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+  
+pinyin('汉语拼音', { 
+  pattern: 'initial', 
+  initialPattern: 'standard', 
+  type: 'array' 
+}); // ['h', '', 'p', '']
+```
+
+
 ## 语法及参数
 
 ### 语法
@@ -296,6 +311,7 @@ interface BasicOptions {
     mode?: 'normal' | 'surname'; // 已废弃，使用 surname 替代
     toneSandhi?: boolean;
     nonZhScope?: RegExp; // 3.24.0+
+    initialPattern?: 'standard' | 'yw'; // 3.27.0+
 }
 
 enum TokenizationAlgorithm {

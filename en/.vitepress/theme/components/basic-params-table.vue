@@ -3,17 +3,20 @@
     <table>
       <tbody>
         <tr>
-          <th width="80">属性</th>
-          <th width="70">类型</th>
-          <th width="100">描述</th>
-          <th width="92">可选值</th>
-          <th><div>说明</div></th>
-          <th width="70">默认值</th>
+          <th width="80">parameter</th>
+          <th width="70">type</th>
+          <th width="100">description</th>
+          <th width="92">optional</th>
+          <th><div>example</div></th>
+          <th width="70">default</th>
         </tr>
         <tr v-for="(row, index) in data" :key="index">
-          <td width="80" :rowspan="row.rowspan" v-if="row.rowspan">
-            {{ row.name }}
-          </td>
+          <td
+            width="80"
+            :rowspan="row.rowspan"
+            v-if="row.rowspan"
+            v-html="row.name"
+          ></td>
           <td width="70" :rowspan="row.rowspan" v-if="row.rowspan">
             {{ row.type }}
           </td>
@@ -32,7 +35,7 @@
                 size="mini"
                 @click="() => handleViewDemo(row)"
               >
-                查看示例
+                view example
               </button>
             </div>
           </td>
@@ -64,13 +67,13 @@ const options = [
   {
     option: 'pattern',
     type: 'string',
-    description: '输出的结果信息',
+    description: 'output result information',
     default: 'pinyin',
     children: [
       {
         value: 'pinyin',
-        desc: '返回拼音全拼',
-        example: `// 返回拼音全拼
+        desc: 'return pinyin full',
+        example: `// return pinyin full
 pinyin('汉语拼音', { pattern: 'pinyin' }); // 'hàn yǔ pīn yīn'
 pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'none' }); // 'han yu pin yin'
 pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'num' }); // 'han4 yu3 pin1 yin1'
@@ -80,16 +83,16 @@ pinyin('汉语拼音', { pattern: 'pinyin', toneType: 'none', type: 'array' }); 
       },
       {
         value: 'initial',
-        desc: '返回声母',
-        example: `// 返回声母
+        desc: 'return initial',
+        example: `// return initial
 pinyin('汉语拼音', { pattern: 'initial' }); // 'h y p y'
 pinyin('汉语拼音', { pattern: 'initial', type: 'array' }); // ["h", "y", "p", "y"]
 `,
       },
       {
         value: 'final',
-        desc: '返回韵母',
-        example: `// 返回韵母
+        desc: 'return final',
+        example: `// return final
 pinyin('汉语拼音', { pattern: 'final' }); // 'àn ǔ īn īn'
 pinyin('汉语拼音', { pattern: 'final', toneType: 'none' }); // 'an u in in'
 pinyin('汉语拼音', { pattern: 'final', type: 'array' }); // ["àn", "ǔ", "īn", "īn"]
@@ -98,37 +101,37 @@ pinyin('汉语拼音', { pattern: 'final', toneType: 'none', type: 'array' }); /
       },
       {
         value: 'finalHead',
-        desc: '返回韵头（介音）',
-        example: `// 返回韵头（介音）
+        desc: 'return final head',
+        example: `// return final head
 pinyin('村庄', { pattern: 'finalHead', type: 'array' }); // [ '', 'u' ]
 `,
       },
       {
         value: 'finalBody',
-        desc: '返回韵腹',
-        example: `// 返回韵腹
+        desc: 'return final body',
+        example: `// return final body
 pinyin('村庄', { pattern: 'finalBody', type: 'array' }); // [ 'ū', 'ā' ]
 `,
       },
       {
         value: 'finalTail',
-        desc: '返回韵尾',
-        example: `// 返回韵尾
+        desc: 'return final tail',
+        example: `// return final tail
 pinyin('村庄', { pattern: 'finalTail', type: 'array' }); // [ 'n', 'ng' ]
 `,
       },
       {
         value: 'num',
-        desc: '返回音调对应数字(轻声返回 0)',
-        example: `// 返回音调
+        desc: 'return tone number (return 0 for light tone)',
+        example: `// return tone number
 pinyin('汉语拼音', { pattern: 'num' }); // '4 3 1 1'
 pinyin('汉语拼音', { pattern: 'num', type: 'array' }); // ["4", "3", "1", "1"]
 `,
       },
       {
         value: 'first',
-        desc: '返回拼音首字母',
-        example: `// 返回首字母
+        desc: 'return first letter',
+        example: `// return first letter
 pinyin('赵钱孙李额', { pattern: 'first' }); // 'z q s l é'
 pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none' }); // 'z q s l e'
 pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' }); // ['z', 'q', 's', 'l', 'e']`,
@@ -138,22 +141,22 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'toneType',
     type: 'string',
-    description: '音调输出形式',
+    description: 'tone output format',
     default: 'symbol',
     children: [
       {
         value: 'symbol',
-        desc: '作为音调符号带在拼音字母上',
+        desc: 'as tone symbol on pinyin letter',
         example: `pinyin('汉语拼音', { toneType: 'symbol' }); // 'hàn yǔ pīn yīn'`,
       },
       {
         value: 'num',
-        desc: '作为数字跟在拼音后',
+        desc: 'as number after pinyin',
         example: `pinyin('汉语拼音', { toneType: 'num' }); // 'han4 yu3 pin1 yin1'`,
       },
       {
         value: 'none',
-        desc: '不加音调',
+        desc: 'no tone',
         example: `pinyin('汉语拼音', { toneType: 'none' }); // 'han yu pin yin'`,
       },
     ],
@@ -161,22 +164,22 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'type',
     type: 'string',
-    description: '输出结果的类型',
+    description: 'output result type',
     default: 'string',
     children: [
       {
         value: 'string',
-        desc: '输出字符串，拼音之间以空格隔开',
+        desc: 'output string, pinyin separated by space',
         example: `pinyin('汉语拼音', { type: 'string' }); // 'hàn yǔ pīn yīn'`,
       },
       {
         value: 'array',
-        desc: '输出为数组',
+        desc: 'output array',
         example: `pinyin('汉语拼音', { type: 'array' }); // ["hàn", "yǔ", "pīn", "yīn"]`,
       },
       {
         value: 'all',
-        desc: '输出完整信息的对象数组',
+        desc: 'output all information object array',
         example: `pinyin('汉语拼音', { type: 'all' }); 
 /** result:
 [
@@ -244,17 +247,18 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'multiple',
     type: 'boolean',
-    description: '是否输出多音字(仅在 text 为单字时生效)',
+    description:
+      'output multiple pinyin (only effective when text is a single character)',
     default: 'false',
     children: [
       {
         value: 'false',
-        desc: '输出汉字最常用的拼音',
+        desc: 'output the most common pinyin of the character',
         example: `pinyin('好', { multiple: false }); // 'hǎo'`,
       },
       {
         value: 'true',
-        desc: '输出汉字的所有拼音',
+        desc: 'output all pinyin of the character',
         example: `pinyin('好', { multiple: true }); // 'hǎo hào'`,
       },
     ],
@@ -262,12 +266,12 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'separator',
     type: 'string',
-    description: '拼音之间的分隔符',
-    default: '空格',
+    description: 'pinyin separator',
+    default: 'space',
     children: [
       {
         value: '-',
-        desc: '拼音之间的分隔符',
+        desc: 'pinyin separator',
         example: `pinyin('汉语拼音', { separator: '-' }); // 'hàn-yǔ-pīn-yīn'`,
       },
     ],
@@ -275,40 +279,35 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'mode <code>deprecated, 使用 surname 代替</code>',
     type: 'string',
-    description: '拼音优先匹配的库模式',
+    description: 'pinyin matching mode',
     default: 'normal',
     children: [
       {
         value: 'normal',
-        desc: '常规模式',
+        desc: 'normal mode',
         example: `pinyin('我叫曾小贤', { mode: 'normal' }); // 'wǒ jiào céng xiǎo xián'`,
-      },
-      {
-        value: 'surname',
-        desc: '姓氏模式(优先匹配姓氏字库)',
-        example: `pinyin('我叫曾小贤', { mode: 'surname' }); // 'wǒ jiào zēng xiǎo xián'`,
       },
     ],
   },
   {
     option: 'nonZh',
     type: 'string',
-    description: '非汉字字符的处理形式',
+    description: 'non-Chinese character processing form',
     default: 'spaced',
     children: [
       {
         value: 'spaced',
-        desc: '非汉字在结果中空格隔开输出',
+        desc: 'non-Chinese character output in result with space',
         example: `pinyin('我very喜欢你', { nonZh: 'spaced' }); // 'wǒ v e r y xǐ huān nǐ'`,
       },
       {
         value: 'consecutive ',
-        desc: '非汉字在结果中紧凑输出',
+        desc: 'non-Chinese character output in result with consecutive',
         example: `pinyin('我very喜欢你', { nonZh: 'consecutive' }); // 'wǒ very xǐ huān nǐ'`,
       },
       {
         value: 'removed ',
-        desc: '非汉字在结果中移除',
+        desc: 'non-Chinese character removed in result',
         example: `pinyin('我very喜欢你', { nonZh: 'removed' }); // 'wǒ xǐ huān nǐ'`,
       },
     ],
@@ -316,12 +315,12 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'nonZhScope',
     type: 'RegExp',
-    description: '指定 nonZh 范围的正则表达式',
+    description: 'regular expression for nonZh scope',
     default: 'null',
     children: [
       {
         value: '/[a-zA-Z]/',
-        desc: '只将英文字符紧凑输出',
+        desc: 'only output English characters in consecutive',
         example: `pinyin('我very喜欢你，真的', { nonZh: 'consecutive', nonZhScope: /[a-zA-Z]/ }); // 'wǒ very xǐ huan nǐ ， zhēn de'`,
       },
     ],
@@ -329,17 +328,18 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'v',
     type: 'boolean',
-    description: '是否将结果中的 ü 替换为 v(带音调的 ǖ,ǘ,ǚ,ǜ 不会被转换)',
+    description:
+      'whether to replace ü with v in the result (ü with tone ǖ,ǘ,ǚ,ǜ will not be converted)',
     default: 'false',
     children: [
       {
         value: 'true',
-        desc: '将结果中的 ü 替换为 v',
+        desc: 'replace ü with v in the result',
         example: `pinyin('吕布', { toneType: 'none', v: true }); // lv bu`,
       },
       {
         value: 'false ',
-        desc: '结果中的 ü 保留',
+        desc: 'keep ü in the result',
         example: `pinyin('吕布', { toneType: 'none', v: false }); // lü bu`,
       },
     ],
@@ -348,17 +348,17 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
     option: 'toneSandhi',
     type: 'boolean',
     description:
-      '是否对<code>一</code>和<code>不</code>应用智能变调，参考<a href=https://zh.wiktionary.org/wiki/Appendix:%E2%80%9C%E4%B8%80%E2%80%9D%E5%8F%8A%E2%80%9C%E4%B8%8D%E2%80%9D%E7%9A%84%E5%8F%98%E8%B0%83 target="_blank">维基百科</a>',
+      'whether to apply smart tone change to <code>一</code> and <code>不</code>, reference <a href=https://zh.wiktionary.org/wiki/Appendix:%E2%80%9C%E4%B8%80%E2%80%9D%E5%8F%8A%E2%80%9C%E4%B8%8D%E2%80%9D%E7%9A%84%E5%8F%98%E8%B0%83 target="_blank">维基百科</a>',
     default: 'true',
     children: [
       {
         value: 'true',
-        desc: '应用',
+        desc: 'apply',
         example: `pinyin('一旦被发现', { toneSandhi: true }); // 'yí dàn bèi fā xiàn'`,
       },
       {
         value: 'false',
-        desc: '不应用',
+        desc: 'not apply',
         example: `pinyin('一旦被发现', { toneSandhi: false }); // 'yī dàn bèi fā xiàn'`,
       },
     ],
@@ -366,23 +366,43 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
   {
     option: 'surname <code>3.21.0+</code>',
     type: 'string',
-    description: '是否启用姓氏模式',
+    description: 'whether to enable surname mode',
     default: 'off',
     children: [
       {
         value: 'off',
-        desc: '不启用姓氏模式',
+        desc: 'not enable surname mode',
         example: `pinyin('我叫曾乐乐'); // wǒ jiào céng lè lè`,
       },
       {
         value: 'head',
-        desc: '识别字符串开头的姓氏',
+        desc: 'recognize surname at the beginning of the string',
         example: `pinyin('我叫曾乐乐', { surname: 'head' }); // wǒ jiào zēng lè lè`,
       },
       {
         value: 'all ',
-        desc: '识别字符串中全部的姓氏',
+        desc: 'recognize all surnames in the string',
         example: `pinyin('我叫曾乐乐', { surname: 'all' }); // wǒ jiào zēng yuè yuè`,
+      },
+    ],
+  },
+  {
+    option: 'initialPattern',
+    type: 'string',
+    description: 'exclude y and w from initial consonants',
+    default: 'yw',
+    children: [
+      {
+        value: 'yw',
+        desc: 'exclude y and w',
+        example: `pinyin('汉语拼音', { pattern: 'initial', initialPattern: 'yw', type: 'array' });
+// ['h', 'y', 'p', 'y']`,
+      },
+      {
+        value: 'standard',
+        desc: 'exclude y and w',
+        example: `pinyin('汉语拼音', { pattern: 'initial', initialPattern: 'standard', type: 'array' });
+// ['h', '', 'p', '']`,
       },
     ],
   },

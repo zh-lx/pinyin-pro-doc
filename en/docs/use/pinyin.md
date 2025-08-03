@@ -280,6 +280,20 @@ pinyin('小明硕士毕业于中国科学院计算所，后在日本京都大学
 });
 ```
 
+### Exclude `y` and `w` from Initial Consonants <Badge type="tip" text="v3.27.0+" vertical="middle" />
+
+According to [wiki](https://zh.wikipedia.org/zh-cn/%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3#%E5%A3%B0%E6%AF%8D), `y` and `w` are not considered initial consonants, but for convenience, in `pinyin-pro`, `y` and `w` are considered initial consonants by default. Setting `options.initialPattern` to `standard` will exclude `y` and `w` from the initial consonants.
+
+```javascript
+import { pinyin } from 'pinyin-pro';
+  
+pinyin('汉语拼音', { 
+  pattern: 'initial', 
+  initialPattern: 'standard', 
+  type: 'array' 
+}); // ['h', '', 'p', '']
+```
+
 ## API
 
 ### Function

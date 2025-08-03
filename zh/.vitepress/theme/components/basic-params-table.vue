@@ -384,6 +384,26 @@ pinyin('赵钱孙李额', { pattern: 'first', toneType: 'none', type: 'array' })
       },
     ],
   },
+  {
+    option: 'initialPattern',
+    type: 'string',
+    description: '声母排除 y 和 w',
+    default: 'yw',
+    children: [
+      {
+        value: 'yw',
+        desc: '不排除 y 和 w',
+        example: `pinyin('汉语拼音', { pattern: 'initial', initialPattern: 'yw', type: 'array' });
+// ['h', 'y', 'p', 'y']`,
+      },
+      {
+        value: 'standard',
+        desc: '排除 y 和 w',
+        example: `pinyin('汉语拼音', { pattern: 'initial', initialPattern: 'standard', type: 'array' });
+// ['h', '', 'p', '']`,
+      },
+    ],
+  },
 ];
 
 const getOptionsTable = () => {
