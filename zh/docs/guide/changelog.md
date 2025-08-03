@@ -1,5 +1,9 @@
 # 更新日志
 
+## 3.27.0
+
+- 【feat】`pinyin` API 新增 `initialPattern` 选项，用于排除 `y` 和 `w` 作为声母 [#295](https://github.com/zh-lx/pinyin-pro/pull/295)
+
 ## 3.26.0
 
 - 【feat】修复 `first` 在 `pattern: 'first'` 模式和 `type: 'all'` 中返回值不一致的问题：修改为对于非中文，统一返回原始非中文字符 [#278](https://github.com/zh-lx/pinyin-pro/pull/278)

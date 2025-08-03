@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.27.0
+
+- 【feat】Added `initialPattern` option to the `pinyin` API to exclude `y` and `w` from the initial consonants [#295](https://github.com/zh-lx/pinyin-pro/pull/295)
+
 ## 3.26.0
 
 - 【feat】Fixed the inconsistency in return values of `first` in `pattern: 'first'` mode and `type: 'all'`: Modify it to consistently return the original non-Chinese characters for non-Chinese inputs. [#278](https://github.com/zh-lx/pinyin-pro/pull/278)
