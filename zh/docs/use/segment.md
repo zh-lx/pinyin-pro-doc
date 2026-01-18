@@ -332,6 +332,8 @@ interface SegmentOptions {
   nonZhScope?: RegExp;
   separator?: string;
   format?: OutputFormat;
+  initialPattern?: 'standard' | 'yw'; // 3.27.0+
+  traditional?: boolean; // 3.28.0+
 }
 
 function segment(text: string, options?: SegmentOptions);

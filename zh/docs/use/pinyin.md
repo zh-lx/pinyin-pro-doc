@@ -312,6 +312,7 @@ interface BasicOptions {
     toneSandhi?: boolean;
     nonZhScope?: RegExp; // 3.24.0+
     initialPattern?: 'standard' | 'yw'; // 3.27.0+
+    traditional?: boolean; // 3.28.0+
 }
 
 enum TokenizationAlgorithm {

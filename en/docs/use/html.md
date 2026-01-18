@@ -212,6 +212,14 @@ interface HtmlOptions {
   nonChineseClass?: string;
   tone?: boolean;
   rp?: boolean; // v3.24.2+  Whether to output <rp>(</rp> and <rp>)</rp> tags
+  toneType?: 'symbol' | 'num' | 'none';
+  v?: boolean;
+  segmentit?: TokenizationAlgorithm; // v3.20.0+
+  surname?: 'off' | 'head' | 'all'; // v3.21.0+
+  mode?: 'normal' | 'surname'; // deprecated, use surname to replace
+  toneSandhi?: boolean;
+  initialPattern?: 'standard' | 'yw'; // 3.27.0+
+  traditional?: boolean; // 3.28.0+
 }
 
 function html(text: string, options?: HtmlOptions): string {}

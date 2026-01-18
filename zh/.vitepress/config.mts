@@ -48,6 +48,10 @@ export default defineConfig({
             link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNp1Uk9v0zAc/Soml2xSE8MNlXQCdUPixA6bBFIuXmwaI8cOsdtRVZUmcUKCAkLTYFSIjT9DohtwYhrrt2nS9bSvgJ1kayvgFOf93nv+vZd0LMoxeeyGKmJW1fKuLN+tr91fXQEGWPK5Z56AId6o+RbhvqUxALyQIJyf9DkiCoEgRIkkSpPW1247130LwLl5qFTskEdN2tKUe876LacuohgpusGIJgeCK8KN/M5KjeCGweYNOIqIHrco2YxFouY0mxSrsIZJiwbEyV8qgHKqKGKODBAjtWvu1VlHRRUjS3WBySpDbZJ4sEDybPAynLchcPtCg2kLUKxvQ3Gsa/CgBkrBJc2TQUJjBVQ7NstGAjdNvNKCRmZzYLswQpS7Sto3Cn2hMm3DvHarYpUM/UlKVQfElLcprwCE8TINFOiCB4mIgF3gTpwI41fSTbuMKJIzC97NKRFipBAMSo6R+by0XZhVLuYTXbRUICGyyRSolXss2OmPF9mb3nhvO/34Lfu+PTreHZ30RseH6bvh+OBVevhl8nb/7GhvfLSTPd06P32Wvuyl/a/ZzuesPxidDCZPhumnA03Lfv2cbH2wp3cJRlwmGgv22XCQPd8f/36dve+fn+7alXKJRV1QkdOJUOw+lILrojqmTL8cSN+qghwx2DS5gX3L/I2yCiGRkStDODuuXGj+W9c/Lf5iYyrVjMS4dn3etbp/AHmWTEg='
           },
           {
+            text: 'addTraditionalDict',
+            link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNptUstuEzEU/RXjzaRSZgw7FGYqUFokVnSRSiDNxh1fMkZ+Mb5JiaJIbFmwYgeIBWKF+IBK0L+p2u74BeyZaZM0Xdk+95zje669pNIIeJ/VqBUd0fzBwcvx5PXRIYnAfmnyuBLFzbQoKZiSBoyQvAYu2l3Ya0BOqpo3HjCQjifP08clJWyrXiO6FN7N5DxQXqXHz9Kx1Y6jPFEQyJU1CCbKXxwWIKYR2zYwXEMozyWcOtvgluZUCqwLAXNZQdoehkQaiZKr1FdcQfEoe7jpiBIV7I+tgCPFF9DkrEPabOw2XH5ixeJGI+ScSBFu486FMeQsAL3glpb7qpEOCS5cbFZbMYvxegupY+ckyZjm0mTokyedvlPFabN27HRIe0Z4kl61JE6ahTRDwoWYNFyEeNZwdSArJCvyprGaJB0ldY2N1r3yLrmjPl1zmeDIGa5pUVya3XsGd857LS+8g0fSgJ8pJEXf5iC5OPtwcfbr+vzj1defyZppFWTKTgfJ9fnvy08/rv58vvz+7d/fL8mwt9gL6bvOU81d9tZbE6awjJMq+4Iv6Yi0SMTWQSJc0vjV/Igx8DrzNdssD280O+mr8BsVYHiseyx22EJ63JBE11VpVnT1HwqoKXY='
+          },
+          {
             text: 'segment',
             link: 'https://play.fe-dev.cn/?entry=index.html&activeFile=main.ts&openConsole=true#eNp1Us1u00AYfJXFF6dSbMMNBacCpUXiRA+tBJIvW+9HvMjeNd5NShRFqsQJCQIIVYUSIVp+ikRa4ERVmreJnebUV2DXcZpEwMnr+WZmvxm7bVBG4LEdyCg0KoZ7ZeVubf3+2irSwLLHXP1EIWb1qmcA8wyFIeQGgEl+UucIJEZ+gBMBUpE21m9b1z0DOQvzQMrYgkcN2lSUe9bGLavGoxhLuhmCIvucSWBafme1CqSusUUDhiNQ4yaFrZgnckGzRYkMqgSa1AcrfykjyqikOLSEj0OoXrOvzjtKKkNYrnECayFuQeI6EyTP5lyGczc5aU01hDYRJeo2HMeqBtdRQCG4pLnCT2gskWzFetmIk4aOV1jQSG+OTNuJMGW2FOaNiX6i0m07ee1G2SgY6pMUqjYSUI9U3jLChKxQX6IOepDwCJkxZS3KrDjh2rDg63pDkJAzJ7ybM6JDsMSOX3C0zGOFbWleuZRPVNNCogREI5SoOl2kZKY/XmRvuqP9nfTjt+z7zvBkb3jaHZ4cpe8Go8NX6dGX8duD8+P90fFu9nT74uxZ+rKb9r5mu5+zXn942h8/GaSfDhUt+/VzvP3BnF3GQ7BDXi+Z54N+9vxg9Pt19r53cbZnlostllRFk6BWhGP7oeBMVdXWdXrFQHhGBeWIxmbRNewZ+n8UFccBEdkicObH5anmv3390+IvNqFCzkm0a8djHaPzB9enTQA='
           },
@@ -78,6 +82,7 @@ export default defineConfig({
           { text: 'html: HTML字符串', link: '/use/html.md' },
           { text: 'polyphonic: 全部读音', link: '/use/polyphonic.md' },
           { text: 'addDict: 提高准确率', link: '/use/addDict.md' },
+          { text: 'addTraditionalDict: 繁体字转换', link: '/use/traditional.md' },
           { text: 'others: 其他 API', link: '/use/others.md' },
         ],
       },

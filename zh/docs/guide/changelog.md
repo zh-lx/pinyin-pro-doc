@@ -1,5 +1,9 @@
 # 更新日志
 
+## 3.28.0
+
+- 【feat】新增 `addTraditionalDict` API，用于更好的识别繁体字 [#303](https://github.com/zh-lx/pinyin-pro/pull/303)
+
 ## 3.27.0
 
 - 【feat】`pinyin` API 新增 `initialPattern` 选项，用于排除 `y` 和 `w` 作为声母 [#295](https://github.com/zh-lx/pinyin-pro/pull/295)
