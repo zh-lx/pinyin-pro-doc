@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.28.1
+
+- 【feat】Added support for recognizing abbreviated forms of rhotic final sounds in the `convert` API [#306](https://github.com/zh-lx/pinyin-pro/pull/306)
+
 ## 3.28.0
 
 - 【feat】Added `addTraditionalDict` API to better recognize traditional Chinese characters [#303](https://github.com/zh-lx/pinyin-pro/pull/303)
